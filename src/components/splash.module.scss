@@ -5,10 +5,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: none;
 }
 
 .inner {
+  position: relative;
+  background-color: antiquewhite;
   width: 80%;
   height: 70%;
   border: 2px solid;
+}
+
+.audio {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border: solid 2px;
+  width: 2rem;
+  height: 2rem;
 }

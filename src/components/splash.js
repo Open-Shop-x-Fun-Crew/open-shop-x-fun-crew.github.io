@@ -6,7 +6,9 @@ export default function Splash(props) {
   if (props.isVisible) {
     return (
       <div className={styles.splash}>
-        <div className={styles.inner}></div>
+        <div className={styles.inner}>
+          <i className={styles.audio}></i>
+        </div>
       </div>
     )
   } else {
