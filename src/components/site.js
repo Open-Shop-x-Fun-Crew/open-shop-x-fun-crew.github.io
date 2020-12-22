@@ -1,6 +1,16 @@
 import React, { useState } from 'react'
-import LogoButton from '../components/site'
+import FilmList from  './film-list'
 
 export default function Site() {
-  return null
-}
+  return (<main>
+    <div>
+    <p>Open Shop is film-making duo</p>
+    
+  </div>  
+  <FilmList/> 
+  <footer>
+    <p>footer text</p>
+  </footer>
+  
+  </main>
+  )}
