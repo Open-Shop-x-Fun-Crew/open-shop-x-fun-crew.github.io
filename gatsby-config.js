@@ -18,7 +18,7 @@ module.exports = {
       options: {
         fonts: [
           `pathway gothic one\:400`,
-          `cormorant\:400`, // you can also specify font weights and styles
+          `cormorant\:400,bold`, // you can also specify font weights and styles
         ],
         display: 'swap',
       },
