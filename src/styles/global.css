@@ -6,3 +6,7 @@
 p {
   font-size: 2rem;
 }
+
+.cursor {
+  cursor: url('../img/cursor.svg');
+}
