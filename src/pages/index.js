@@ -1,17 +1,14 @@
-import React, { useState } from "react"
-import ClickMeButton from "../components/click-me-button"
+import React, { useState } from 'react'
+import LogoButton from '../components/logo-button'
+import Splash from '../components/splash'
+import Site from '../components/site'
 
 export default function Home() {
-  const [clicked, setClicked] = useState(false)
-
-  function toggleButton() {
-    setClicked(!clicked)
-  }
-
   return (
-    <>
-      <p>old paragraph text</p>
-      <ClickMeButton onClick={toggleButton} isClicked={clicked} />
-    </>
+    <div>
+      <LogoButton />
+      <Splash />
+      <Site />
+    </div>
   )
 }
