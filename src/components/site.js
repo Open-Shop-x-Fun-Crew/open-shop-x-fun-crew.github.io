@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import FilmList from './film-list'
 
-import styles from './site.module.css'
+import styles from './site.module.scss'
 
 export default function Site() {
   return (

@@ -16,11 +16,13 @@
   "dependencies": {
     "gatsby": "^2.26.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-sass": "^2.8.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "sass": "^1.30.0"
   },
   "repository": {
     "type": "git",
