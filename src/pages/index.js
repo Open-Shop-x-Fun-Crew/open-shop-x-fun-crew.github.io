@@ -9,9 +9,15 @@ export default function Home() {
   const [splashVisible, setSplashVisible] = useState(true)
   const [pos, setPos] = useState({ x: null, y: null })
   const [stickyPos, setStickyPos] = useState({ x: null, y: null })
+  const [audioIconPos, setAudioIconPos] = useState(null)
 
   function updatePos(e) {
     setPos({ x: e.clientX, y: e.clientY })
+  }
+
+  function getIconPos(e, icon) {
+    console.log(icon.getBoundingClientRect())
+    setAudioIconPos(icon.getBoundingClientRect())
   }
 
   function toggleSplashVisible() {
@@ -32,7 +38,7 @@ export default function Home() {
         splashVisible={splashVisible}
         stickyPos={stickyPos}
       />
-      <Splash isVisible={splashVisible} />
+      <Splash isVisible={splashVisible} getIconPos={getIconPos} />
       <Site isVisible={!splashVisible} />
     </div>
   )
