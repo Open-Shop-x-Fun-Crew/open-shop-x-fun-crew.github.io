@@ -18,7 +18,7 @@ export default function LogoButton(props) {
   } else {
     return (
       <button
-        className={styles.button}
+        className={`${styles.button} ${styles.sticky}`}
         onClick={props.onClick}
         style={{ top: props.stickyPos.y, left: props.stickyPos.x }}
       >

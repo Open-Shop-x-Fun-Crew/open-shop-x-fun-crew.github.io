@@ -1,6 +1,5 @@
 .button {
   z-index: 100;
-  position: fixed;
   transform: translateX(-50%) translateY(-50%);
   width: 2.5rem;
   height: 2.5rem;
@@ -14,5 +13,10 @@
 }
 
 .moving {
+  position: fixed;
   cursor: none;
+}
+
+.sticky {
+  position: relative;
 }
