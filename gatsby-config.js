@@ -8,22 +8,35 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-favicon`,
       options: {
-        name: "GatsbyJS",
-        short_name: "GatsbyJS",
-        start_url: "/",
-        background_color: "#6b37bf",
-        theme_color: "#6b37bf",
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: "standalone",
-        icon: "src/images/favicon.png", // This path is relative to the root of the site.
-        // An optional attribute which provides support for CORS check.
-        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
-        // Any invalid keyword or empty string defaults to `anonymous`
-        crossOrigin: `use-credentials`,
-      },
-    },
+        logo: "./src/favicon/Ellipse 3 (1).png",
+  
+        // WebApp Manifest Configuration
+        appName: null, // Inferred with your package.json
+        appDescription: null,
+        developerName: null,
+        developerURL: null,
+        dir: 'auto',
+        lang: 'en-US',
+        background: '#fff',
+        theme_color: '#fff',
+        display: 'standalone',
+        orientation: 'any',
+        start_url: '/?homescreen=1',
+        version: '1.0',
+  
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          yandex: false,
+          windows: false
+        }
+      }
+    }
   ],
 }
