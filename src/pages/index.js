@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 export default function Home() {
   const [splashVisible, setSplashVisible] = useState(true)
   const [pos, setPos] = useState({ x: null, y: null })
+  const [stickyPos, setStickyPos] = useState({ x: null, y: null })
 
   function updatePos(e) {
     setPos({ x: e.clientX, y: e.clientY })
@@ -15,6 +16,7 @@ export default function Home() {
 
   function toggleSplashVisible() {
     setSplashVisible(!splashVisible)
+    setStickyPos({ x: pos.x, y: pos.y })
   }
 
   useEffect(() => {
@@ -24,7 +26,12 @@ export default function Home() {
 
   return (
     <div>
-      <LogoButton onClick={toggleSplashVisible} pos={pos} />
+      <LogoButton
+        onClick={toggleSplashVisible}
+        pos={pos}
+        splashVisible={splashVisible}
+        stickyPos={stickyPos}
+      />
       <Splash isVisible={splashVisible} />
       <Site isVisible={!splashVisible} />
     </div>
