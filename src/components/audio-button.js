@@ -14,5 +14,9 @@ export default function AudioButton(props) {
       )
   }, [])
 
-  return <i className={styles.audio} ref={icon}></i>
+  function playAudio() {
+    console.log('audio playing')
+  }
+
+  return <i className={styles.audio} ref={icon} onClick={playAudio}></i>
 }

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styles from './logo-button.module.scss'
 
 export default function LogoButton(props) {
-  if (props.splashVisible) {
+  if (props.splashVisible && !props.overlapping) {
     return (
       <button
         className={`${styles.button} ${styles.moving}`}
@@ -15,6 +15,8 @@ export default function LogoButton(props) {
         shop.
       </button>
     )
+  } else if (props.splashVisible) {
+    return null
   } else {
     return (
       <button
