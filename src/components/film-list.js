@@ -18,7 +18,7 @@ export default function FilmList(props) {
       <FilmListItem
         image={DimmigaDar}
         text="Dimmiga Dar"
-        descrption="Short film 2020, 17min"
+        description="Short film 2019, 17min"
         alt="Description of film"
       />
       <FilmListItem

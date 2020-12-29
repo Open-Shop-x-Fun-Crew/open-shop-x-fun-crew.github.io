@@ -3,6 +3,7 @@ import FilmList from './film-list'
 import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
 import styles from './site.module.scss'
+import buttonStyles from './logo-button.module.scss'
 
 export default function Site(props) {
   if (props.isVisible) {
@@ -22,8 +23,8 @@ export default function Site(props) {
           </section>
           <div>
             <p>
-              Open Shop is film-making duo Martin Sandin &amp; Viktor Annerstål.
-              Martin writes and directs, Viktor edits and shoots
+              Open Shop is filmmaking duo Martin Sandin &amp; Viktor Annerstål.
+              Martin writes and directs. Viktor edits and shoots.
             </p>
           </div>
           <figure>
@@ -44,7 +45,11 @@ export default function Site(props) {
         </main>
         <footer>
           <p>open shop Nytorgsgatan 20 117 54 Stockholm info@openshop.se</p>
-          <img src="favicon.ico" alt="Open Shop company logo." />
+          <a className={`${buttonStyles.button} ${styles.logo} ${styles.links}`} href="#top">
+            open
+            <br />
+            shop.
+          </a>
         </footer>
       </div>
     )
@@ -52,3 +57,4 @@ export default function Site(props) {
     return null
   }
 }
+ 
