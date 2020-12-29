@@ -6,21 +6,22 @@
   align-items: center;
   justify-content: center;
   cursor: none;
+  position: absolute;
+}
+
+video {
+  position: absolute;
 }
 
 .inner {
-  position: relative;
+  position: absolute;
   background-color: antiquewhite;
   width: 80%;
   height: 70%;
   border: 2px solid;
+  position: relative;
 }
 
-.audio {
+.audioButton {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  border: solid 2px;
-  width: 2rem;
-  height: 2rem;
 }
