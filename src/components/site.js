@@ -20,7 +20,7 @@ let ExpandingWrapper = styled.div`
 export default function Site(props) {
   if (props.isVisible) {
     return (
-      <div>
+      <ExpandingWrapper stickyPos={props.stickyPos}>
         <main>
           <figure>
             <img
@@ -59,7 +59,7 @@ export default function Site(props) {
           <p>open shop Nytorgsgatan 20 117 54 Stockholm info@openshop.se</p>
           <img src="favicon.ico" alt="Open Shop company logo." />
         </footer>
-      </div>
+      </ExpandingWrapper>
     )
   } else {
     return null

@@ -57,31 +57,17 @@ export default function Home() {
     return () => window.removeEventListener('mousemove', updatePos)
   }, [])
 
-  if (splashVisible) {
-    return (
-      <div>
-        <LogoButton
-          onClick={toggleSplashVisible}
-          pos={pos}
-          splashVisible={splashVisible}
-          stickyPos={stickyPos}
-          overlapping={overlapping}
-        />
-        <Splash getIconPos={getIconPos} />
-      </div>
-    )
-  } else {
-    return (
-      <div>
-        <LogoButton
-          onClick={toggleSplashVisible}
-          pos={pos}
-          splashVisible={splashVisible}
-          stickyPos={stickyPos}
-          overlapping={overlapping}
-        />
-        <Site stickyPos={stickyPos} />
-      </div>
-    )
-  }
+  return (
+    <div>
+      <LogoButton
+        onClick={toggleSplashVisible}
+        pos={pos}
+        splashVisible={splashVisible}
+        stickyPos={stickyPos}
+        overlapping={overlapping}
+      />
+      <Splash getIconPos={getIconPos} isVisible={splashVisible} />
+      <Site stickyPos={stickyPos} isVisible={!splashVisible} />
+    </div>
+  )
 }
