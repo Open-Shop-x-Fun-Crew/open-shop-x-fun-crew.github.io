@@ -6,25 +6,19 @@
   align-items: center;
   justify-content: center;
   cursor: none;
+  position: absolute;
+}
+
+video {
+  position: absolute;
 }
 
 .inner {
-  position: relative;
+  position: absolute;
   background-color: antiquewhite;
   width: 80%;
   height: 70%;
   border: 2px solid;
-}
-
-.outer {
-
-}
-
-.inner {
-
-}
-
-.innerVideoWrapper {
   position: relative;
 }
 
