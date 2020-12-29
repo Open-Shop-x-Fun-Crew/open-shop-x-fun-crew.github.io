@@ -1,31 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import FilmList from './film-list'
-<<<<<<< HEAD
 import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
-=======
-import styled, { css, keyframes } from 'styled-components'
 
->>>>>>> got styled components going
+import styled, { keyframes } from 'styled-components'
+
 import styles from './site.module.scss'
 
-// const expand = props => keyframes`
-//   from { clip-path: circle(0px at ${props.stickyPos.x}px ${props.stickyPos.y}px); }
-//   to { clip-path: circle(600px at ${props.stickyPos.x}px ${props.stickyPos.y}px); }
-//   `
-
-let expand = pos => {
-  console.log(pos)
-  return keyframes`
+let expandInfo = pos => keyframes`
   from { clip-path: circle(0px at ${pos.x}px ${pos.y}px); }
   to { clip-path: circle(600px at ${pos.x}px ${pos.y}px); }
   `
-}
 
 let ExpandingWrapper = styled.div`
-  animation: ${props => expand(props.stickyPos)} 3s linear;
+  animation: ${props => expandInfo(props.stickyPos)} 3s linear;
   animation-fill-mode: forwards;
-  background: red;
 `
 
 export default function Site(props) {
