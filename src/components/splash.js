@@ -17,13 +17,15 @@ export default function Splash(props) {
           <source src={props.video + ".mp4"} type="video/mp4" />
           Sorry, your browser doesn't support embedded videos.
         </video>
-        <video autoPlay loop muted width={innerVideoWidth} height={innerVideoHeight} className={styles.inner}>
-          <source src={props.video + ".webm"} type="video/webm" />
-          <source src={props.video + ".mp4"} type="video/mp4" />
-          Sorry, your browser doesn't support embedded videos.
-        </video>
-        <AudioButton getIconPos={props.getIconPos} />
-        {/* generic tags can't be inside video elements, audio tag had to be moved out */}
+        <div className={styles.innerVideoWrapper}>
+          <video autoPlay loop muted width={innerVideoWidth} height={innerVideoHeight} className={styles.inner}>
+            <source src={props.video + ".webm"} type="video/webm" />
+            <source src={props.video + ".mp4"} type="video/mp4" />
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+          <AudioButton className={styles.audioButton} getIconPos={props.getIconPos} />
+          {/* generic tags can't be inside video elements, audio tag had to be moved out */}
+        </div>
       </div>
     )
   } else {

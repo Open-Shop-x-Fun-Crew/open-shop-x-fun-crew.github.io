@@ -9,9 +9,9 @@ import styles from './film-list.module.scss'
 export default function FilmList(props) {
   return (
     <ul>
-      <FilmListItem image={film1} text="Film title goes here" />
-      <FilmListItem image={film2} text="Film title goes here" />
-      <FilmListItem image={film3} text="Film title goes here" />
+      <FilmListItem image={film1} text="Distressed" alt="Description of film" />
+      <FilmListItem image={film2} text="Dimmiga Dar" alt="Description of film" />
+      <FilmListItem image={film3} text="Mad Dog - 2016" alt="Description of film" />
     </ul>
   )
 }
