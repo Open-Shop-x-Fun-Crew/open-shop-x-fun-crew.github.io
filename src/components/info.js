@@ -5,10 +5,24 @@ import viktor from '../../static/images/viktor.png'
 import styles from './info.module.scss'
 import buttonStyles from './logo-button.module.scss'
 
+import styled, { keyframes } from 'styled-components'
+
+let expandInfo = pos => keyframes`
+  from { clip-path: circle(0px at ${pos.x}px ${pos.y}px); }
+  to { clip-path: circle(600px at ${pos.x}px ${pos.y}px); }
+  `
+
+let ExpandingWrapper = styled.div`
+  position: absolute;
+
+  animation: ${props => expandInfo(props.stickyPos)} 1s linear;
+  animation-fill-mode: forwards;
+`
+
 export default function Info(props) {
-  if (props.isVisible) {
-    return (
-      <div className={styles.info}>
+  return (
+    <ExpandingWrapper stickyPos={props.stickyPos} onTop={props.onTop}>
+      <div className={styles.info} style={{ zIndex: props.onTop ? 100 : 80 }}>
         <figure>
           <img
             className={styles.portrait}
@@ -43,8 +57,6 @@ export default function Info(props) {
         </a>
         <button>look here</button>
       </div>
-    )
-  } else {
-    return null
-  }
+    </ExpandingWrapper>
+  )
 }
