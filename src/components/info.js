@@ -33,7 +33,7 @@ export default function Info(props) {
         </section>
         <div>
           <p>
-            Open Shop is filmmaking duo Martin Sandin &amp; Viktor AnnerstÃ¥l.
+            Open Shop is filmmaking duo Martin Sandin &amp; Viktor Annerstål.
             Martin writes and directs. Viktor edits and shoots.
           </p>
         </div>
