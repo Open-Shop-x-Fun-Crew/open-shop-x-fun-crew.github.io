@@ -14,15 +14,15 @@ let expandInfo = pos => keyframes`
 
 let ExpandingWrapper = styled.div`
   position: absolute;
-  z-index: 110;
-  animation: ${props => expandInfo(props.stickyPos)} 0s linear;
+  z-index: ${props => (props.onTop ? 110 : 0)};
+  animation: ${props => expandInfo(props.stickyPos)} 500ms linear;
   animation-fill-mode: forwards;
 `
 
 export default function Info(props) {
   return (
     <ExpandingWrapper stickyPos={props.stickyPos} onTop={props.onTop}>
-      <div className={styles.info} style={{ zIndex: 110 }}>
+      <div className={styles.info}>
         <figure>
           <img
             className={styles.portrait}

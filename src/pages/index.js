@@ -18,8 +18,8 @@ export default function Home() {
         splashVisible={splashVisible}
         toggleSplashVisible={toggleSplashVisible}
       />
-      <FilmList isVisible={!splashVisible} />
-      <Footer isVisible={!splashVisible} />
+      {/* <FilmList isVisible={!splashVisible} />
+      <Footer isVisible={!splashVisible} /> */}
     </main>
   )
 }
