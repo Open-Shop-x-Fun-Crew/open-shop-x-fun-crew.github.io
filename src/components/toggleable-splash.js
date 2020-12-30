@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import LogoButton from '../components/logo-button'
 import Splash from '../components/splash'
 import Info from '../components/info'
-
-import useDelayedUnmounting from '../hooks/use-delayed-unmounting.js'
+import useDelayedUnmounting from '../hooks/use-delayed-unmounting-splash.js'
 
 export default function ToggleableSplash(props) {
   const [pos, setPos] = useState({ x: null, y: null })
@@ -77,13 +76,7 @@ export default function ToggleableSplash(props) {
         overlapping={overlapping}
       />
       {state !== 'unmounted' && <Info onTop={onTop} stickyPos={stickyPos} />}
-      {state !== 'mounted' && (
-        <Splash
-          getIconPos={getIconPos}
-          onTop={!onTop}
-          stickyPos={{ x: 0, y: 0 }}
-        />
-      )}
+      {state !== 'mounted' && <Splash getIconPos={getIconPos} onTop={!onTop} />}
     </div>
   )
 }

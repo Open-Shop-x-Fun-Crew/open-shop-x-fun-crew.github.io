@@ -10,14 +10,13 @@ let expandSplash = pos => keyframes`
 
 let ExpandingWrapperSplash = styled.div`
   position: absolute;
-
   animation: ${props => expandSplash(props.stickyPos)} 1s linear;
   animation-fill-mode: forwards;
 `
 export default function Splash(props) {
   return (
-    <ExpandingWrapperSplash stickyPos={props.stickyPos} onTop={props.onTop}>
-      <div className={styles.splash} style={{ zIndex: props.onTop ? 100 : 80 }}>
+    <div onTop={props.onTop} style={{ zIndex: 80 }}>
+      <div className={styles.splash}>
         <video autoPlay loop muted width="100%" height="100%">
           <source src={props.video + '.webm'} type="video/webm" />
           <source src={props.video + '.mp4'} type="video/mp4" />
@@ -36,6 +35,6 @@ export default function Splash(props) {
           {/* generic tags can't be inside video elements, audio tag had to be moved out */}
         </div>
       </div>
-    </ExpandingWrapperSplash>
+    </div>
   )
 }

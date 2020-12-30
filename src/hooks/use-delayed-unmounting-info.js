@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function useDelayedUnmounting(time = 1000) {
+export default function useDelayedUnmounting(time = 0) {
   const [state, setState] = React.useState('unmounted')
   const show = () => {
     if (state === 'unmounting') {

@@ -9,20 +9,20 @@ import styled, { keyframes } from 'styled-components'
 
 let expandInfo = pos => keyframes`
   from { clip-path: circle(0px at ${pos.x}px ${pos.y}px); }
-  to { clip-path: circle(600px at ${pos.x}px ${pos.y}px); }
+  to { clip-path: circle(800px at ${pos.x}px ${pos.y}px); }
   `
 
 let ExpandingWrapper = styled.div`
   position: absolute;
-
-  animation: ${props => expandInfo(props.stickyPos)} 1s linear;
+  z-index: 110;
+  animation: ${props => expandInfo(props.stickyPos)} 0s linear;
   animation-fill-mode: forwards;
 `
 
 export default function Info(props) {
   return (
     <ExpandingWrapper stickyPos={props.stickyPos} onTop={props.onTop}>
-      <div className={styles.info} style={{ zIndex: props.onTop ? 100 : 80 }}>
+      <div className={styles.info} style={{ zIndex: 110 }}>
         <figure>
           <img
             className={styles.portrait}
