@@ -1,12 +1,19 @@
 .filmstripText {
-    position: absolute;
-    color: white;
-    top: calc(50% - 0.6em);
-    left: 43%;
-    font-size: 4em;
-    line-height: 1;
+  position: absolute;
+  color: white;
+  top: calc(50% - 0.6em);
+  left: 43%;
+  font-size: 4em;
+  line-height: 1;
+}
+li {
+  max-width: 100%;
 }
 
-.filmstripSection { 
-    position: relative;
+.filmstripSection {
+  position: relative;
+}
+
+img {
+  width: 100%;
 }

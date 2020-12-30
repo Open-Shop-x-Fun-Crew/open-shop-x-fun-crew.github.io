@@ -2,15 +2,16 @@ import React, { useState } from 'react'
 import FilmList from './film-list'
 import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
-import styles from './site.module.scss'
+import styles from './info.module.scss'
 import buttonStyles from './logo-button.module.scss'
 
-export default function Site(props) {
+export default function Info(props) {
   if (props.isVisible) {
     return (
-      <div className="info">
+      <div className={styles.info}>
         <figure>
           <img
+            className={styles.portrait}
             src={martin}
             alt="Picture of Martin as a child with his father, on the beach."
           />
@@ -28,6 +29,7 @@ export default function Site(props) {
         </div>
         <figure>
           <img
+            className={styles.portrait}
             src={viktor}
             alt="Picture of Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
           />

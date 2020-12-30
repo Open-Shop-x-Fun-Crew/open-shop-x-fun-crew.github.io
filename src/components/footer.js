@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import FilmList from './film-list'
 import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
-import styles from './site.module.scss'
+import styles from './footer.module.scss'
 import buttonStyles from './logo-button.module.scss'
 
 export default function Footer(props) {

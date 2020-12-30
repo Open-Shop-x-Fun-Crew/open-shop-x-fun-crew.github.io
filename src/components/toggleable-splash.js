@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import LogoButton from '../components/logo-button'
 import Splash from '../components/splash'
-import Site from '../components/site'
+import Info from '../components/info'
 
 export default function ToggleableSplash(props) {
   return (
@@ -14,7 +14,7 @@ export default function ToggleableSplash(props) {
         overlapping={props.overlapping}
       />
       <Splash isVisible={props.splashVisible} getIconPos={props.getIconPos} />
-      <Site isVisible={!props.splashVisible} />
+      <Info isVisible={!props.splashVisible} />
     </div>
   )
 }

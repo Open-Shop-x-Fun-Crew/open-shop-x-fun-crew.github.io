@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .links {
   text-decoration: none;
 }
@@ -14,4 +18,13 @@
   &:visited {
     color: currentColor;
   }
+}
+
+.info {
+  height: 100vh;
+  background: green;
+}
+
+.portrait {
+  max-width: 100px;
 }
