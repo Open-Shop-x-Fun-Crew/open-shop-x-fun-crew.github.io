@@ -20,6 +20,7 @@ export default function Splash(props) {
           <AudioButton
             className={styles.audioButton}
             getIconPos={props.getIconPos}
+            isVisible={props.isVisible}
           />
           {/* generic tags can't be inside video elements, audio tag had to be moved out */}
         </div>
