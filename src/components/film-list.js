@@ -9,7 +9,7 @@ import styles from './film-list.module.scss'
 export default function FilmList(props) {
   if (props.isVisible) {
     return (
-      <ul>
+      <ul id="film-list">
         <FilmListItem
           image={Distressed}
           text="Distressed"
