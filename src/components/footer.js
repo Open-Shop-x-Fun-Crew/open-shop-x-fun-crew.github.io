@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from './footer.module.scss'
+import { Link } from 'react-scroll'
 
 export default function Footer(props) {
   if (props.isVisible) {
@@ -14,11 +15,19 @@ export default function Footer(props) {
           <br />
           info@openshop.se
         </address>
-        <button className={styles.logo}>
-          open
-          <br />
-          shop.
-        </button>
+        <Link
+          activeClass="active"
+          to="info"
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
+          <div className={styles.logo}>
+            open
+            <br />
+            shop.
+          </div>
+        </Link>
       </footer>
     )
   } else {

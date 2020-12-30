@@ -22,8 +22,15 @@ address {
   border: 0.01rem solid black;
   background: transparent;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'cormorant';
   font-weight: bold;
   font-size: 0.5rem;
   border-radius: 50%;
+  &:hover {
+    background: black;
+    color: white;
+  }
 }

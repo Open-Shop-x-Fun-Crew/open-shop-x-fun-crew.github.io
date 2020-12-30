@@ -3,13 +3,12 @@ import FilmList from './film-list'
 import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
 import styles from './info.module.scss'
-import buttonStyles from './logo-button.module.scss'
 import { Link } from 'react-scroll'
 
 export default function Info(props) {
   if (props.isVisible) {
     return (
-      <div className={styles.info}>
+      <div id="info" className={styles.info}>
         <figure>
           <img
             className={styles.portrait}
@@ -48,7 +47,7 @@ export default function Info(props) {
           to="film-list"
           spy={true}
           smooth={true}
-          duration={1000}
+          duration={500}
         >
           look here
         </Link>
