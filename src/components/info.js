@@ -1,26 +1,11 @@
 import React, { useState } from 'react'
-import FilmList from './film-list'
 import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
 import styles from './info.module.scss'
-import buttonStyles from './logo-button.module.scss'
-
-import styled, { keyframes } from 'styled-components'
-
-let expandInfo = pos => keyframes`
-  from { clip-path: circle(0px at center) }
-  to { clip-path: circle(800px at center) }
-  `
-
-let ExpandingWrapper = styled.div`
-  position: absolute;
-  z-index: ${props => (props.onTop ? 110 : 0)};
-  animation: ${expandInfo} 500ms linear;
-  animation-fill-mode: forwards;
-`
+import { Link } from 'react-scroll'
 
 export default function Info(props) {
-  /* this is the old way of doing it, helps me understand better, leave for now */
+  /* this is the old way of doing it, helps me understand better, leave for now @emma */
   // const useStateReturn = useState()
   // const hiddenEmail = useStateReturn[0]
   // const sethiddenEmail = useStateReturn[1]
@@ -31,9 +16,9 @@ export default function Info(props) {
     sethiddenEmail(!hiddenEmail)
   }
 
-  return (
-    <ExpandingWrapper onTop={props.onTop}>
-      <div className={styles.info}>
+  if (props.isVisible) {
+    return (
+      <div id="info" className={styles.info}>
         <figure>
           <img
             className={styles.portrait}
@@ -43,12 +28,12 @@ export default function Info(props) {
           <figcaption>Martin 1985.</figcaption>
         </figure>
         <section>
-          <button onClick={togglehiddenEmail}> kick up some dust</button>
-          <p className={hiddenEmail? styles.hidden : ""}>info@openshop.se</p>
+          <button onClick={togglehiddenEmail}>kick up some dust</button>
+          <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
         </section>
         <div>
           <p>
-            Open Shop is filmmaking duo Martin Sandin &amp; Viktor Annerstål.
+            Open Shop is filmmaking duo Martin Sandin &amp; Viktor AnnerstÃ¥l.
             Martin writes and directs. Viktor edits and shoots.
           </p>
         </div>
@@ -66,8 +51,19 @@ export default function Info(props) {
         >
           slow-skate with us
         </a>
-        <button>look here</button>
+
+        <Link
+          activeClass="active"
+          to="film-list"
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
+          look here
+        </Link>
       </div>
-    </ExpandingWrapper>
-  )
+    )
+  } else {
+    return null
+  }
 }

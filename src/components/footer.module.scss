@@ -1,17 +1,36 @@
-.links {
-  text-decoration: none;
+footer {
+  padding: 3rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+address {
+  line-height: 0.8rem;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: 'pathway gothic one';
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
-  display: block;
-  font-size: 1rem;
-  transform: none;
-  line-height: 1;
-  padding: 0.8em;
-  width: 4em;
-  height: 4em;
-
-  &:visited {
-    color: currentColor;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.01rem solid black;
+  background: transparent;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'cormorant';
+  font-weight: bold;
+  font-size: 0.5rem;
+  border-radius: 50%;
+  &:hover {
+    background: black;
+    color: white;
   }
 }

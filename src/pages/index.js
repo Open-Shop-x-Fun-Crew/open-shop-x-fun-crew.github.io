@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react'
 import FilmList from '../components/film-list'
 import Footer from '../components/footer'
 import ToggleableSplash from '../components/toggleable-splash'
@@ -18,8 +17,8 @@ export default function Home() {
         splashVisible={splashVisible}
         toggleSplashVisible={toggleSplashVisible}
       />
-      {/* <FilmList isVisible={!splashVisible} />
-      <Footer isVisible={!splashVisible} /> */}
+      <FilmList isVisible={!splashVisible} />
+      <Footer isVisible={!splashVisible} />
     </main>
   )
 }

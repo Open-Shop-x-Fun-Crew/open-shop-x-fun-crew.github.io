@@ -1,23 +1,33 @@
 import React, { useState } from 'react'
-import FilmList from './film-list'
-import martin from '../../static/images/martin.png'
-import viktor from '../../static/images/viktor.png'
 import styles from './footer.module.scss'
-import buttonStyles from './logo-button.module.scss'
+import { Link } from 'react-scroll'
 
 export default function Footer(props) {
   if (props.isVisible) {
     return (
       <footer>
-        <p>open shop Nytorgsgatan 20 117 54 Stockholm info@openshop.se</p>
-        <a
-          className={`${buttonStyles.button} ${styles.logo} ${styles.links}`}
-          href="#top"
-        >
-          open
+        <address>
+          open shop
           <br />
-          shop.
-        </a>
+          Nytorgsgatan 20
+          <br />
+          117 54 Stockholm
+          <br />
+          info@openshop.se
+        </address>
+        <Link
+          activeClass="active"
+          to="info"
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
+          <div className={styles.logo}>
+            open
+            <br />
+            shop.
+          </div>
+        </Link>
       </footer>
     )
   } else {
