@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react'
 import FilmList from '../components/film-list'
 import Footer from '../components/footer'
 import ToggleableSplash from '../components/toggleable-splash'
