@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-
-import LogoButton from '../components/logo-button'
-import Splash from '../components/splash'
-import Site from '../components/site'
 import { useEffect } from 'react'
+import FilmList from '../components/film-list'
+import Footer from '../components/footer'
+import ToggleableSplash from '../components/toggleable-splash'
 
 export default function Home() {
   const [splashVisible, setSplashVisible] = useState(true)
@@ -58,17 +57,18 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <main>
       <div id="#top" />
-      <LogoButton
-        onClick={toggleSplashVisible}
-        pos={pos}
+      <ToggleableSplash
         splashVisible={splashVisible}
+        toggleSplashVisible={toggleSplashVisible}
+        getIconPos={getIconPos}
+        pos={pos}
         stickyPos={stickyPos}
         overlapping={overlapping}
       />
-      <Splash isVisible={splashVisible} getIconPos={getIconPos} />
-      <Site isVisible={!splashVisible} />
-    </div>
+      <FilmList isVisible={!splashVisible} />
+      <Footer isVisible={!splashVisible} />
+    </main>
   )
 }

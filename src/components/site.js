@@ -9,7 +9,7 @@ export default function Site(props) {
   if (props.isVisible) {
     return (
       <div>
-        <main>
+        <div className="info">
           <figure>
             <img
               src={martin}
@@ -41,11 +41,16 @@ export default function Site(props) {
             slow-skate with us
           </a>
           <button>look here</button>
-          <FilmList />
-        </main>
+        </div>
+
+        <FilmList />
+
         <footer>
           <p>open shop Nytorgsgatan 20 117 54 Stockholm info@openshop.se</p>
-          <a className={`${buttonStyles.button} ${styles.logo} ${styles.links}`} href="#top">
+          <a
+            className={`${buttonStyles.button} ${styles.logo} ${styles.links}`}
+            href="#top"
+          >
             open
             <br />
             shop.
@@ -57,4 +62,3 @@ export default function Site(props) {
     return null
   }
 }
- 
