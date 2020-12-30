@@ -11,14 +11,16 @@ export default function Home() {
   }
 
   return (
-    <main>
-      <div id="#top" />
-      <ToggleableSplash
-        splashVisible={splashVisible}
-        toggleSplashVisible={toggleSplashVisible}
-      />
-      <FilmList isVisible={!splashVisible} />
+    <>
+      <main>
+        <div id="#top" />
+        <ToggleableSplash
+          splashVisible={splashVisible}
+          toggleSplashVisible={toggleSplashVisible}
+        />
+        <FilmList isVisible={!splashVisible} />
+      </main>
       <Footer isVisible={!splashVisible} />
-    </main>
+    </>
   )
 }
