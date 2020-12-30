@@ -15,7 +15,7 @@ let ExpandingWrapperSplash = styled.div`
 `
 export default function Splash(props) {
   return (
-    <div onTop={props.onTop} style={{ zIndex: 80 }}>
+    <div style={{ zIndex: 80 }}>
       <div className={styles.splash}>
         <video autoPlay loop muted width="100%" height="100%">
           <source src={props.video + '.webm'} type="video/webm" />

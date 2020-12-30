@@ -8,20 +8,20 @@ import buttonStyles from './logo-button.module.scss'
 import styled, { keyframes } from 'styled-components'
 
 let expandInfo = pos => keyframes`
-  from { clip-path: circle(0px at ${pos.x}px ${pos.y}px); }
-  to { clip-path: circle(800px at ${pos.x}px ${pos.y}px); }
+  from { clip-path: circle(0px at center) }
+  to { clip-path: circle(800px at center) }
   `
 
 let ExpandingWrapper = styled.div`
   position: absolute;
   z-index: ${props => (props.onTop ? 110 : 0)};
-  animation: ${props => expandInfo(props.stickyPos)} 500ms linear;
+  animation: ${expandInfo} 500ms linear;
   animation-fill-mode: forwards;
 `
 
 export default function Info(props) {
   return (
-    <ExpandingWrapper stickyPos={props.stickyPos} onTop={props.onTop}>
+    <ExpandingWrapper onTop={props.onTop}>
       <div className={styles.info}>
         <figure>
           <img
