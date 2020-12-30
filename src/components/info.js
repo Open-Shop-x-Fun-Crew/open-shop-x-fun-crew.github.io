@@ -20,6 +20,17 @@ let ExpandingWrapper = styled.div`
 `
 
 export default function Info(props) {
+  /* this is the old way of doing it, helps me understand better, leave for now */
+  // const useStateReturn = useState()
+  // const hiddenEmail = useStateReturn[0]
+  // const sethiddenEmail = useStateReturn[1]
+
+  const [hiddenEmail, sethiddenEmail] = useState(true)
+
+  function togglehiddenEmail() {
+    sethiddenEmail(!hiddenEmail)
+  }
+
   return (
     <ExpandingWrapper onTop={props.onTop}>
       <div className={styles.info}>
@@ -32,8 +43,8 @@ export default function Info(props) {
           <figcaption>Martin 1985.</figcaption>
         </figure>
         <section>
-          <button>kick up some dust</button>
-          <p className={styles.hidden}>info@openshop.se</p>
+          <button onClick={togglehiddenEmail}> kick up some dust</button>
+          <p className={hiddenEmail? styles.hidden : ""}>info@openshop.se</p>
         </section>
         <div>
           <p>
