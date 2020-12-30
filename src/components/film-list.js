@@ -7,26 +7,28 @@ import MadDog from '../../static/images/MadDog.jpg'
 import styles from './film-list.module.scss'
 
 export default function FilmList(props) {
-  return (
-    <ul>
-      <FilmListItem
-        image={Distressed}
-        text="Distressed"
-        description="Short film 2020, 15min"
-        alt="Description of film"
-      />
-      <FilmListItem
-        image={DimmigaDar}
-        text="Dimmiga Dar"
-        description="Short film 2019, 17min"
-        alt="Description of film"
-      />
-      <FilmListItem
-        image={MadDog}
-        text="Mad Dog"
-        description="Full-length film 2016, 85min"
-        alt="Description of film"
-      />
-    </ul>
-  )
+  if (props.isVisible) {
+    return (
+      <ul>
+        <FilmListItem
+          image={Distressed}
+          text="Distressed"
+          description="Short film 2020, 15min"
+          alt="Description of film"
+        />
+        <FilmListItem
+          image={DimmigaDar}
+          text="Dimmiga Dar"
+          description="Short film 2019, 17min"
+          alt="Description of film"
+        />
+        <FilmListItem
+          image={MadDog}
+          text="Mad Dog"
+          description="Full-length film 2016, 85min"
+          alt="Description of film"
+        />
+      </ul>
+    )
+  } else return null
 }
