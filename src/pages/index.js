@@ -59,6 +59,7 @@ export default function Home() {
 
   return (
     <div>
+      <div id="#top" />
       <LogoButton
         onClick={toggleSplashVisible}
         pos={pos}
