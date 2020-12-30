@@ -4,6 +4,7 @@ import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
 import styles from './info.module.scss'
 import buttonStyles from './logo-button.module.scss'
+import { Link } from 'react-scroll'
 
 export default function Info(props) {
   if (props.isVisible) {
@@ -41,7 +42,16 @@ export default function Info(props) {
         >
           slow-skate with us
         </a>
-        <button>look here</button>
+
+        <Link
+          activeClass="active"
+          to="film-list"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
+          look here
+        </Link>
       </div>
     )
   } else {
