@@ -3,6 +3,22 @@ import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
 import styles from './info.module.scss'
 import { Link } from 'react-scroll'
+import styled, { keyframes } from 'styled-components'
+
+const expand = pos => keyframes`
+from {
+  clip-path: circle(0% at ${pos.x}px ${pos.y}px)
+} to {
+  clip-path: circle(200% at ${pos.x}px ${pos.y}px)
+}
+`
+
+const ExpandingDiv = styled.div`
+  position: absolute;
+  top: 0;
+  animation: ${props => expand(props.animationCenter)} 500ms linear;
+  animation-fill-mode: forwards;
+`
 
 export default function Info(props) {
   /* this is the old way of doing it, helps me understand better, leave for now @emma */
@@ -16,8 +32,11 @@ export default function Info(props) {
     sethiddenEmail(!hiddenEmail)
   }
 
-  if (props.isVisible) {
-    return (
+  return (
+    <ExpandingDiv
+      animationCenter={props.animationCenter}
+      style={{ zIndex: props.onTop ? 90 : 0 }}
+    >
       <div id="info" className={styles.info}>
         <figure>
           <img
@@ -62,8 +81,6 @@ export default function Info(props) {
           look here
         </Link>
       </div>
-    )
-  } else {
-    return null
-  }
+    </ExpandingDiv>
+  )
 }
