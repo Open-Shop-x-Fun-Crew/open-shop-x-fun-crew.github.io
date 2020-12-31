@@ -19,6 +19,10 @@ export default function FilmList(props) {
   })
 
   if (props.isVisible) {
-    return <ul id="film-list">{filmListItems}</ul>
+    return (
+      <ul className={styles.filmList} id="film-list">
+        {filmListItems}
+      </ul>
+    )
   } else return null
 }
