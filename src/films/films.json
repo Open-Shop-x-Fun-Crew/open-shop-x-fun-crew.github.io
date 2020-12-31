@@ -1,0 +1,20 @@
+[
+  {
+    "filmTitle": "Distressed",
+    "filmDescription": "Short Film 2020. 15min",
+    "filmScreenshot": "distressed.png",
+    "filmTagline": "Description of film"
+  },
+  {
+    "filmTitle": "Dimmiga Dar",
+    "filmDescription": "Short Film 2019. 17min",
+    "filmScreenshot": "dimmiga-dar.png",
+    "filmTagline": "Description of film"
+  },
+  {
+    "filmTitle": "Mad Dog",
+    "filmDescription": "Documentary 2016. 85min",
+    "filmScreenshot": "mad-dog.png",
+    "filmTagline": "Description of film"
+  }
+]

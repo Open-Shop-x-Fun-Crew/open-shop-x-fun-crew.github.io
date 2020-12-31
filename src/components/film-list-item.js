@@ -7,7 +7,7 @@ export default function FilmListItem(props) {
     <li className={styles.filmstrip}>
       <img src={props.image} alt={props.alt} className={styles.image} />
       <div className={styles.info}>
-        <p className={styles.title}>{props.text}</p>
+        <p className={styles.title}>{props.title}</p>
         <p className={styles.description}>{props.description}</p>
       </div>
     </li>
