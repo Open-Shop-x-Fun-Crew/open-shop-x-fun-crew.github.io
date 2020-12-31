@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import AudioButton from '../components/audio-button.js'
 import styles from './splash.module.scss'
 

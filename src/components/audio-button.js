@@ -21,10 +21,11 @@ export default function AudioButton(props) {
   }
 
   return (
-    <i
+    <button
+      aria-label="play / pause audio"
       className={`${styles.audio} ${props.className}`}
       ref={icon}
       onClick={playAudio}
-    ></i>
+    ></button>
   )
 }

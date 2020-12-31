@@ -23,7 +23,7 @@ export default function Info(props) {
           <img
             className={styles.portrait}
             src={martin}
-            alt="Picture of Martin as a child with his father, on the beach."
+            alt="Martin as a child with his father, on the beach."
           />
           <figcaption>Martin 1985.</figcaption>
         </figure>
@@ -41,7 +41,7 @@ export default function Info(props) {
           <img
             className={styles.portrait}
             src={viktor}
-            alt="Picture of Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
+            alt="Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
           />
           <figcaption>Viktor 1993.</figcaption>
         </figure>

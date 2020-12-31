@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import LogoButton from '../components/logo-button'
 import Splash from '../components/splash'
 import Info from '../components/info'
