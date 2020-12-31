@@ -55,7 +55,11 @@ export default function ToggleableSplash(props) {
         <Info animationCenter={clickPos} onTop={!props.splashVisible} />
       )}
       {state !== 'mounted' && (
-        <Splash getIconPos={getIconPos} onTop={props.splashVisible} />
+        <Splash
+          getIconPos={getIconPos}
+          animationCenter={clickPos}
+          onTop={props.splashVisible}
+        />
       )}
     </div>
   )
