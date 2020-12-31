@@ -6,7 +6,8 @@ import useDelayedUnmounting from '../hooks/use-delayed-unmounting'
 
 export default function ToggleableSplash(props) {
   const [state, show, hide] = useDelayedUnmounting(510)
-  const [clickPos, setClickPos] = useState({ x: 0, y: 0 })
+  const [clickPosSplash, setClickPosSplash] = useState({ x: 0, y: 0 })
+  const [clickPosInfo, setClickPosInfo] = useState({ x: 0, y: 0 })
   const [audioIconPos, setAudioIconPos] = useState({
     x: 0,
     y: 0,
@@ -21,7 +22,9 @@ export default function ToggleableSplash(props) {
   function toggleSplashVisible(coordinates) {
     if (state === 'mounted' || state === 'unmounted') {
       props.toggleSplashVisible()
-      setClickPos(coordinates)
+      props.splashVisible
+        ? setClickPosInfo(coordinates)
+        : setClickPosSplash(coordinates)
     }
     toggleState()
   }
@@ -52,12 +55,12 @@ export default function ToggleableSplash(props) {
         audioIconPos={audioIconPos}
       />
       {state !== 'unmounted' && (
-        <Info animationCenter={clickPos} onTop={!props.splashVisible} />
+        <Info animationCenter={clickPosInfo} onTop={!props.splashVisible} />
       )}
       {state !== 'mounted' && (
         <Splash
           getIconPos={getIconPos}
-          animationCenter={clickPos}
+          animationCenter={clickPosSplash}
           onTop={props.splashVisible}
         />
       )}
