@@ -7,7 +7,6 @@ import films from '../films/films.json'
 
 export default function FilmList(props) {
   const filmListItems = films.map(film => {
-    console.log(film.filmScreenshot)
     return (
       <FilmListItem
         image={`screenshots/${film.filmScreenshot}`}
