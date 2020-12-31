@@ -3,7 +3,7 @@ import styles from './logo-button.module.scss'
 
 export default function LogoButton(props) {
   const [pos, setPos] = useState({ x: null, y: null })
-  const [overlapping, setOverlapping] = useState(false)
+  const [overlapping, setOverlapping] = useState(true)
 
   function onClick(e) {
     props.onClick({ x: e.clientX, y: e.clientY })
