@@ -19,7 +19,7 @@ export default function Info(props) {
   if (props.isVisible) {
     return (
       <div id="info" className={styles.info}>
-        <figure>
+        <figure className={styles.martin}>
           <img
             className={styles.portrait}
             src={martin}
@@ -27,17 +27,17 @@ export default function Info(props) {
           />
           <figcaption>Martin 1985.</figcaption>
         </figure>
-        <section>
+        <section className={styles.kick}>
           <button onClick={togglehiddenEmail}>kick up some dust</button>
           <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
         </section>
-        <div>
+        <div className={styles.infotext}>
           <p>
             Open Shop is filmmaking duo Martin Sandin &amp; Viktor Annerstål.
             Martin writes and directs. Viktor edits and shoots.
           </p>
         </div>
-        <figure>
+        <figure className={styles.viktor}>
           <img
             className={styles.portrait}
             src={viktor}
@@ -47,12 +47,13 @@ export default function Info(props) {
         </figure>
         <a
           href="https://www.instagram.com/artandpoeticjustice/?hl=en"
-          className={styles.links}
+          className={`${styles.links} ${styles.skate}`}
         >
           slow-skate with us
         </a>
 
         <Link
+          className={styles.lookhere}
           activeClass="active"
           to="film-list"
           spy={true}
