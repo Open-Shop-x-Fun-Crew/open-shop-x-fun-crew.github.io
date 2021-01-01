@@ -2,19 +2,31 @@ import React, { useState } from 'react'
 import LogoButton from '../components/logo-button'
 import Splash from '../components/splash'
 import Info from '../components/info'
+import useDelayedUnmounting from '../hooks/use-delayed-unmounting'
 
 export default function ToggleableSplash(props) {
-  const [clickPos, setClickPos] = useState({ x: null, y: null })
+  const [state, show, hide] = useDelayedUnmounting(510)
+  const [clickPosSplash, setClickPosSplash] = useState({ x: 0, y: 0 })
+  const [clickPosInfo, setClickPosInfo] = useState({ x: 0, y: 0 })
   const [audioIconPos, setAudioIconPos] = useState({
-    x: null,
-    y: null,
-    w: null,
-    h: null,
+    x: 0,
+    y: 0,
+    w: 0,
+    h: 0,
   })
 
+  function toggleState() {
+    state === 'mounted' ? hide() : show()
+  }
+
   function toggleSplashVisible(coordinates) {
-    props.toggleSplashVisible()
-    setClickPos(coordinates)
+    if (state === 'mounted' || state === 'unmounted') {
+      props.toggleSplashVisible()
+      props.splashVisible
+        ? setClickPosInfo(coordinates)
+        : setClickPosSplash(coordinates)
+    }
+    toggleState()
   }
 
   function getIconPos(e, icon) {
@@ -42,8 +54,16 @@ export default function ToggleableSplash(props) {
         splashVisible={props.splashVisible}
         audioIconPos={audioIconPos}
       />
-      <Splash isVisible={props.splashVisible} getIconPos={getIconPos} />
-      <Info isVisible={!props.splashVisible} animationCenter={clickPos} />
+      {state !== 'unmounted' && (
+        <Info animationCenter={clickPosInfo} onTop={!props.splashVisible} />
+      )}
+      {state !== 'mounted' && (
+        <Splash
+          getIconPos={getIconPos}
+          animationCenter={clickPosSplash}
+          onTop={props.splashVisible}
+        />
+      )}
     </div>
   )
 }

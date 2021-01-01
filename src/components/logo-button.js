@@ -6,7 +6,7 @@ export default function LogoButton(props) {
   const [overlapping, setOverlapping] = useState(true)
 
   function onClick(e) {
-    props.onClick({ x: e.clientX, y: e.clientY })
+    props.onClick({ x: pos.x, y: pos.y })
   }
 
   function updatePos(e) {
