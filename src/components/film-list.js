@@ -7,7 +7,6 @@ import films from '../films/films.json'
 
 export default function FilmList(props) {
   const filmListItems = films.map(film => {
-    console.log(film.filmScreenshot)
     return (
       <FilmListItem
         image={`screenshots/${film.filmScreenshot}`}
@@ -19,6 +18,10 @@ export default function FilmList(props) {
   })
 
   if (props.isVisible) {
-    return <ul id="film-list">{filmListItems}</ul>
+    return (
+      <ul className={styles.filmList} id="film-list">
+        {filmListItems}
+      </ul>
+    )
   } else return null
 }

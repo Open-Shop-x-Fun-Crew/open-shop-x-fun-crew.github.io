@@ -38,40 +38,41 @@ export default function Info(props) {
       style={{ zIndex: props.onTop ? 90 : 0 }}
     >
       <div id="info" className={styles.info}>
-        <figure>
+        <figure className={styles.martin}>
           <img
             className={styles.portrait}
             src={martin}
-            alt="Picture of Martin as a child with his father, on the beach."
+            alt="Martin as a child with his father, on the beach."
           />
           <figcaption>Martin 1985.</figcaption>
         </figure>
-        <section>
+        <section className={styles.kick}>
           <button onClick={togglehiddenEmail}>kick up some dust</button>
           <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
         </section>
-        <div>
+        <div className={styles.infotext}>
           <p>
             Open Shop is filmmaking duo Martin Sandin &amp; Viktor Annerstål.
             Martin writes and directs. Viktor edits and shoots.
           </p>
         </div>
-        <figure>
+        <figure className={styles.viktor}>
           <img
             className={styles.portrait}
             src={viktor}
-            alt="Picture of Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
+            alt="Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
           />
           <figcaption>Viktor 1993.</figcaption>
         </figure>
         <a
           href="https://www.instagram.com/artandpoeticjustice/?hl=en"
-          className={styles.links}
+          className={`${styles.links} ${styles.skate}`}
         >
           slow-skate with us
         </a>
 
         <Link
+          className={styles.lookhere}
           activeClass="active"
           to="film-list"
           spy={true}
