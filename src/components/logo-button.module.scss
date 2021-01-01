@@ -1,10 +1,12 @@
+@import '../styles/colours.scss';
+
 .button {
   z-index: 100;
   transform: translateX(-50%) translateY(-50%);
   width: 2.5rem;
   height: 2.5rem;
-  border: 0.01rem solid black;
-  background: antiquewhite;
+  border: 0.01rem solid $black;
+  background: $grey;
   text-align: center;
   font-family: 'cormorant';
   font-weight: bold;

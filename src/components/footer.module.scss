@@ -1,3 +1,5 @@
+@import '../styles/colours.scss';
+
 footer {
   padding: 3rem 0 2rem 0;
   display: flex;
@@ -19,7 +21,7 @@ address {
 .logo {
   width: 2.5rem;
   height: 2.5rem;
-  border: 0.01rem solid black;
+  border: 0.01rem solid $black;
   background: transparent;
   text-align: center;
   display: flex;
@@ -30,7 +32,7 @@ address {
   font-size: 0.5rem;
   border-radius: 50%;
   &:hover {
-    background: black;
-    color: white;
+    background: $black;
+    color: $white;
   }
 }
