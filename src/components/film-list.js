@@ -3,10 +3,10 @@ import FilmListItem from './film-list-item'
 
 import styles from './film-list.module.scss'
 
-import films from '../films/films.json'
+import filmInfo from '../films/films.json'
 
 export default function FilmList(props) {
-  const filmListItems = films.map(film => {
+  const filmListItems = filmInfo.films.map(film => {
     return (
       <FilmListItem
         image={`screenshots/${film.filmScreenshot}`}

@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import ReactPlayer from 'react-player'
 import AudioButton from '../components/audio-button.js'
 import styles from './splash.module.scss'
 import styled, { keyframes } from 'styled-components'
 
-import distressedBg from '../../static/splashvids/distressed-2.mp4'
-import distressedFg from '../../static/splashvids/distressed-1.mp4'
+import filmInfo from '../films/films.json'
+
+const backgrounds = filmInfo.splashVideos
+
+function getRandom(number, previousNumber) {
+  let randomNumber = Math.floor(Math.random() * number) + 1
+  if (randomNumber === previousNumber) {
+    return getRandom(number, previousNumber)
+  } else return randomNumber
+}
 
 const expand = pos => keyframes`
   from {
@@ -27,32 +36,37 @@ const ExpandingDiv = styled.div`
 `
 
 export default function Splash(props) {
+  const [startVid, setStartVid] = useState(getRandom(backgrounds))
+
+  function next() {
+    if (+startVid === backgrounds) {
+      setStartVid(1)
+    } else {
+      setStartVid(+startVid + 1)
+    }
+  }
+
   return (
     <ExpandingDiv animationCenter={props.animationCenter}>
       <div className={styles.splash} style={{ zIndex: props.onTop ? 90 : 0 }}>
-        <video
+        <ReactPlayer
           className={styles.bgVid}
-          autoPlay
-          loop
-          muted
+          muted={true}
           width="100%"
           height="100%"
-        >
-          <source src={distressedBg} type="video/mp4" />
-          Sorry, your browser doesn't support embedded videos.
-        </video>
+          url={`/splashvids/bg_${startVid}.mp4`}
+          playing={true}
+          onEnded={next}
+        />
+
         <div className={styles.inner}>
-          <video
+          <ReactPlayer
             className={styles.mainVid}
-            autoPlay
-            loop
-            muted
-            width="100%"
-            height="100%"
-          >
-            <source src={distressedFg} type="video/mp4" />
-            Sorry, your browser doesn't support embedded videos.
-          </video>
+            muted={true}
+            url={`/splashvids/fg_${startVid}.mp4`}
+            playing={true}
+            onEnded={next}
+          />
           <AudioButton
             className={styles.audioButton}
             getIconPos={props.getIconPos}
