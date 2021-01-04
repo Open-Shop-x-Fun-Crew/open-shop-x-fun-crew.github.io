@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  pathPrefix: "/open-shop",
   plugins: [
     {
       resolve: `gatsby-plugin-sass`,
