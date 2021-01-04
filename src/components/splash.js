@@ -3,6 +3,9 @@ import AudioButton from '../components/audio-button.js'
 import styles from './splash.module.scss'
 import styled, { keyframes } from 'styled-components'
 
+import distressedBg from '../../static/splashvids/distressed-2.mp4'
+import distressedFg from '../../static/splashvids/distressed-1.mp4'
+
 const expand = pos => keyframes`
   from {
     clip-path: circle(0% at ${pos.x}px ${pos.y}px)
@@ -27,15 +30,27 @@ export default function Splash(props) {
   return (
     <ExpandingDiv animationCenter={props.animationCenter}>
       <div className={styles.splash} style={{ zIndex: props.onTop ? 90 : 0 }}>
-        <video autoPlay loop muted width="100%" height="100%">
-          <source src={props.video + '.webm'} type="video/webm" />
-          <source src={props.video + '.mp4'} type="video/mp4" />
+        <video
+          className={styles.bgVid}
+          autoPlay
+          loop
+          muted
+          width="100%"
+          height="100%"
+        >
+          <source src={distressedBg} type="video/mp4" />
           Sorry, your browser doesn't support embedded videos.
         </video>
         <div className={styles.inner}>
-          <video autoPlay loop muted width="100%" height="100%">
-            <source src={props.video + '.webm'} type="video/webm" />
-            <source src={props.video + '.mp4'} type="video/mp4" />
+          <video
+            className={styles.mainVid}
+            autoPlay
+            loop
+            muted
+            width="100%"
+            height="100%"
+          >
+            <source src={distressedFg} type="video/mp4" />
             Sorry, your browser doesn't support embedded videos.
           </video>
           <AudioButton

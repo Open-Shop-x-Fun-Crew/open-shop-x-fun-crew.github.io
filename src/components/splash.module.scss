@@ -8,15 +8,21 @@
   width: 100vw;
 }
 
-video {
+.bgVid {
   position: absolute;
+  object-fit: cover;
+}
+
+.mainVid {
+  width: 60vw;
+  height: auto;
 }
 
 .inner {
   position: absolute;
-  width: 80%;
-  height: 70%;
-  border: 2px solid;
+  width: fit-content;
+  height: fit-content;
+  border: 5px solid white;
   position: relative;
 }
 
