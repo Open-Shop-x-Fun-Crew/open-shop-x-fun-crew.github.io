@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Player from '../components/player'
 
-import styles from './film-list-item.module.scss'
+import styles from './toggleable-film.module.scss'
 
-export default function FilmListItem(props) {
+export default function ToggleableFilm(props) {
+  const [playing, setPlaying] = useState(false)
+
+  if (playing) {
+    return <Player />
+  }
+
   return (
     <li className={styles.filmstrip}>
       <img src={props.image} alt={props.alt} className={styles.image} />

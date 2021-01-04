@@ -1,18 +1,19 @@
 import React from 'react'
-import FilmListItem from './film-list-item'
+import ToggleableFilm from './toggleable-film'
 
 import styles from './film-list.module.scss'
 
 import films from '../films/films.json'
 
 export default function FilmList(props) {
-  const filmListItems = films.map(film => {
+  const ToggleableFilms = films.map(film => {
     return (
-      <FilmListItem
+      <ToggleableFilm
         image={`screenshots/${film.filmScreenshot}`}
         title={film.filmTitle}
         description={film.filmDescription}
         alt={film.filmTagline}
+        url={film.filmURL}
       />
     )
   })
@@ -20,7 +21,7 @@ export default function FilmList(props) {
   if (props.isVisible) {
     return (
       <ul className={styles.filmList} id="film-list">
-        {filmListItems}
+        {ToggleableFilms}
       </ul>
     )
   } else return null
