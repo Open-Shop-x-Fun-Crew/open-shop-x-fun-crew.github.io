@@ -80,7 +80,7 @@ export default function Splash(props) {
             autoPlay={true}
             preload="metadata"
             muted={true}
-            poster={`screenshots/mad-dog.png`}
+            // poster={`screenshots/mad-dog.png`}
             playsInline={true}
           ></video>
           <AudioButton
