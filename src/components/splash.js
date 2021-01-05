@@ -5,7 +5,7 @@ import styled, { keyframes } from 'styled-components'
 
 import filmInfo from '../films/films.json'
 
-const backgrounds = filmInfo.splashVideos
+const noOfSplashVids = filmInfo.splashVideos
 
 function getRandom(number, previousNumber) {
   let randomNumber = Math.floor(Math.random() * number) + 1
@@ -35,17 +35,13 @@ const ExpandingDiv = styled.div`
 `
 
 export default function Splash(props) {
-  const [startVid, setStartVid] = useState(getRandom(backgrounds))
-
-  function test() {
-    console.log('hey')
-  }
+  const [index, setIndex] = useState(getRandom(noOfSplashVids))
 
   function next() {
-    if (+startVid === backgrounds) {
-      setStartVid(1)
+    if (index === noOfSplashVids) {
+      setIndex(1)
     } else {
-      setStartVid(+startVid + 1)
+      setIndex(index => index + 1)
     }
   }
 
@@ -55,32 +51,26 @@ export default function Splash(props) {
         <video
           type="video/mp4"
           className={styles.bgVid}
-          src={`/splashvids/bg_${startVid}.mp4`}
+          src={`/splashvids/bg_${index}.mp4`}
           autoPlay={true}
           onEnded={next}
           preload="auto"
           muted={true}
+          poster={`/splashvids/bg_poster_${index}.png`}
           playsInline={true}
           width="100%"
           height="100%"
         ></video>
 
         <div className={styles.inner}>
-          {/* <ReactPlayer
-            className={styles.mainVid}
-            muted={true}
-            url={`/splashvids/fg_${startVid}.mp4`}
-            playing={true}
-            // onEnded={next}
-          /> */}
           <video
             type="video/mp4"
             className={styles.mainVid}
-            src={`/splashvids/fg_${startVid}.mp4`}
+            src={`/splashvids/fg_${index}.mp4`}
             autoPlay={true}
             preload="metadata"
             muted={true}
-            // poster={`screenshots/mad-dog.png`}
+            poster={`/splashvids/fg_poster_${index}.png`}
             playsInline={true}
           ></video>
           <AudioButton
