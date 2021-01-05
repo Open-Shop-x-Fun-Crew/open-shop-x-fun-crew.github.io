@@ -9,9 +9,7 @@ const noOfSplashVids = filmInfo.splashVideos
 
 function getRandom(number, previousNumber) {
   let randomNumber = Math.floor(Math.random() * number) + 1
-  if (randomNumber === previousNumber) {
-    return getRandom(number, randomNumber)
-  } else return randomNumber
+  else return randomNumber
 }
 
 const expand = pos => keyframes`
