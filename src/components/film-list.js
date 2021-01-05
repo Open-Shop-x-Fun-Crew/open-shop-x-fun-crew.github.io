@@ -3,10 +3,12 @@ import ToggleableFilm from './toggleable-film'
 
 import styles from './film-list.module.scss'
 
-import films from '../films/films.json'
+import filmInfo from '../films/films.json'
 
 export default function FilmList(props) {
-  const ToggleableFilms = films.map(film => {
+
+  const filmListItems = filmInfo.films.map(film => {
+
     return (
       <ToggleableFilm
         image={`screenshots/${film.filmScreenshot}`}
@@ -18,11 +20,11 @@ export default function FilmList(props) {
     )
   })
 
-  if (props.isVisible) {
-    return (
-      <ul className={styles.filmList} id="film-list">
-        {ToggleableFilms}
-      </ul>
-    )
-  } else return null
+
+  return (
+    <ul className={styles.filmList} id="film-list">
+      {filmListItems}
+    </ul>
+  )
+
 }

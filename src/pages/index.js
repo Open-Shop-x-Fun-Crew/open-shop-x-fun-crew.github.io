@@ -18,9 +18,9 @@ export default function Home() {
           splashVisible={splashVisible}
           toggleSplashVisible={toggleSplashVisible}
         />
-        <FilmList isVisible={!splashVisible} />
+        {!splashVisible && <FilmList />}
       </main>
-      <Footer isVisible={!splashVisible} />
+      {!splashVisible && <Footer />}
     </>
   )
 }

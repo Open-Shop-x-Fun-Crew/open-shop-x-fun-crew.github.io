@@ -1,23 +1,27 @@
-[
-  {
-    "filmTitle": "Distressed",
-    "filmDescription": "Short Film 2020. 15min",
-    "filmScreenshot": "distressed.png",
-    "filmTagline": "Description of film",
-    "filmURL": "https://vimeo.com/469563520"
-  },
-  {
-    "filmTitle": "Dimmiga Dar",
-    "filmDescription": "Short Film 2019. 17min",
-    "filmScreenshot": "dimmiga-dar.png",
-    "filmTagline": "Description of film",
-    "filmURL": "https://vimeo.com/258888984"
-  },
-  {
-    "filmTitle": "Mad Dog",
-    "filmDescription": "Documentary 2016. 85min",
-    "filmScreenshot": "mad-dog.png",
-    "filmTagline": "Description of film",
-    "filmURL": "https://vimeo.com/297684755"
-  }
-]
+{
+  "films": [
+    {
+      "filmTitle": "Distressed",
+      "filmDescription": "Short Film 2020. 15min",
+      "filmScreenshot": "distressed.png",
+      "filmTagline": "Description of film",
+      "filmURL": "https://vimeo.com/469563520"
+    },
+    {
+      "filmTitle": "Dimmiga Dar",
+      "filmDescription": "Short Film 2019. 17min",
+      "filmScreenshot": "dimmiga-dar.png",
+      "filmTagline": "Description of film",
+      "filmURL": "https://vimeo.com/258888984"
+    },
+    {
+      "filmTitle": "Mad Dog",
+      "filmDescription": "Documentary 2016. 85min",
+      "filmScreenshot": "mad-dog.png",
+      "filmTagline": "Description of film",
+      "filmURL": "https://vimeo.com/297684755"
+    }
+  ],
+
+  "splashVideos": 3
+}

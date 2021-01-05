@@ -2,9 +2,12 @@
   z-index: 100;
   cursor: pointer;
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-  border: solid 2px;
-  width: 2rem;
-  height: 2rem;
+  top: 5rem;
+  left: 5rem;
+  opacity: 0.4;
+  width: 4rem;
+  height: 4rem;
+  background: url(../../static/images/audio-spectrum-md.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
