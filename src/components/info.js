@@ -51,10 +51,11 @@ export default function Info(props) {
           <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
         </section>
         <div className={styles.infotext}>
-          <p>
+          <h1>
             Open Shop is filmmaking duo Martin Sandin &amp; Viktor Annerstål.
+            <br />
             Martin writes and directs. Viktor edits and shoots.
-          </p>
+          </h1>
         </div>
         <figure className={styles.viktor}>
           <img

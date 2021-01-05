@@ -35,14 +35,21 @@
   width: 50vw;
   height: 100%;
   align-items: center;
+  h1 {
+    font-size: 2rem;
+    font-family: 'pathway gothic one';
+  }
 }
 
 .portrait {
   max-width: 10vw;
 }
 
-.portrait figcaption {
-  display: inline;
+figcaption {
+  display: inline-block;
+  font-family: 'pathway gothic one';
+  font-size: 1rem;
+  padding: 1rem;
 }
 
 .martin {
@@ -59,15 +66,17 @@
 .lookhere {
   background-color: $white;
   font-family: 'cormorant';
+  font-size: 1.5rem;
   grid-column: 1/9;
   grid-row: 10/11;
   text-align: center;
   padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-bottom: 6vh;
   cursor: pointer;
 }
 
 .skate {
+  font-size: 1.5rem;
   color: $black;
   text-align: center;
   grid-column: 6/8;
@@ -80,11 +89,15 @@
   grid-column: 2/4;
   grid-row: 2/3;
   cursor: pointer;
+  p {
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
+  }
 }
 
 .kick button {
   font-family: 'cormorant';
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -94,5 +107,9 @@
   .viktor {
     grid-column: 2/4;
     grid-row: 7/9;
+  }
+
+  .infotext {
+    transform: translateY(-30%);
   }
 }
