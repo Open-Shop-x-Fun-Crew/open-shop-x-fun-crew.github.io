@@ -18,6 +18,7 @@ export default function AudioButton(props) {
 
 
   function toggleAudio() {
+    audio.volume = 0.3
     audio.paused ? audio.play() : audio.pause()    
   }
 
