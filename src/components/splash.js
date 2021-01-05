@@ -57,7 +57,8 @@ export default function Splash(props) {
           width="100%"
           height="100%"
         >
- Sorry, your browser doesn't support embedded videos.</video>
+          Sorry, your browser doesn't support embedded videos.
+        </video>
 
         <div className={styles.inner}>
           <video

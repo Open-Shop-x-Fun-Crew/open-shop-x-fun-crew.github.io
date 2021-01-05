@@ -5,18 +5,27 @@
   "version": "0.1.0",
   "license": "0BSD",
   "contributers": [
-    { "name" : "Sofia Darke"
-    , "email" : "sofia.darke@hyperisland.se"
-    }, { "name" : "Saeid Fattahi"
-      , "email" : "saeid.fattahi@hyperisland.se"
-      }, { "name" : "Neha Hirve"
-        , "email" : "neha.hirve@hyperisland.se"
-        , "url" : "http://nehahirve.github.io/"
-        }, { "name" : "Saghar Noursobhi"
-          }, { "name" : "Emma Scott-Allen"
-            , "email" : "emma.scottallen@hyperisland.se"
-            }
-        ],
+    {
+      "name": "Sofia Darke",
+      "email": "sofia.darke@hyperisland.se"
+    },
+    {
+      "name": "Saeid Fattahi",
+      "email": "saeid.fattahi@hyperisland.se"
+    },
+    {
+      "name": "Neha Hirve",
+      "email": "neha.hirve@hyperisland.se",
+      "url": "http://nehahirve.github.io/"
+    },
+    {
+      "name": "Saghar Noursobhi"
+    },
+    {
+      "name": "Emma Scott-Allen",
+      "email": "emma.scottallen@hyperisland.se"
+    }
+  ],
   "scripts": {
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
