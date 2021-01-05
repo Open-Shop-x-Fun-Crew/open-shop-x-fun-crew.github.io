@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import AudioButton from '../components/audio-button.js'
 import styles from './splash.module.scss'
 import styled, { keyframes } from 'styled-components'
 
-import distressedBg from '../../static/splashvids/distressed-2.mp4'
-import distressedFg from '../../static/splashvids/distressed-1.mp4'
+import filmInfo from '../films/films.json'
+
+const noOfSplashVids = filmInfo.splashVideos
+
+function getRandom(number, previousNumber) {
+  let randomNumber = Math.floor(Math.random() * number) + 1
+  if (randomNumber === previousNumber) {
+    return getRandom(number, randomNumber)
+  } else return randomNumber
+}
 
 const expand = pos => keyframes`
   from {
@@ -27,31 +35,40 @@ const ExpandingDiv = styled.div`
 `
 
 export default function Splash(props) {
+  const [index, setIndex] = useState(getRandom(noOfSplashVids))
+
+  function next() {
+    setIndex(index => (index === noOfSplashVids ? 1 : index + 1))
+  }
+
   return (
     <ExpandingDiv animationCenter={props.animationCenter}>
       <AudioButton getIconPos={props.getIconPos} />
       <div className={styles.splash} style={{ zIndex: props.onTop ? 90 : 0 }}>
         <video
+          type="video/mp4"
           className={styles.bgVid}
-          autoPlay
-          loop
-          muted
+          src={`/splashvids/bg_${index}.mp4`}
+          autoPlay={true}
+          onEnded={next}
+          muted={true}
+          poster={`/splashvids/bg_poster_${index}.png`}
+          playsInline={true}
           width="100%"
           height="100%"
         >
-          <source src={distressedBg} type="video/mp4" />
-          Sorry, your browser doesn't support embedded videos.
-        </video>
+ Sorry, your browser doesn't support embedded videos.</video>
+
         <div className={styles.inner}>
           <video
+            type="video/mp4"
             className={styles.mainVid}
-            autoPlay
-            loop
-            muted
-            width="100%"
-            height="100%"
+            src={`/splashvids/fg_${index}.mp4`}
+            autoPlay={true}
+            muted={true}
+            poster={`/splashvids/fg_poster_${index}.png`}
+            playsInline={true}
           >
-            <source src={distressedFg} type="video/mp4" />
             Sorry, your browser doesn't support embedded videos.
           </video>
 

@@ -14,7 +14,7 @@ export default function AudioButton(props) {
   return (
     <button
       aria-label="play / pause audio"
-      className={`${styles.audio} ${props.className}`}
+      className={styles.audio}
       ref={icon}
       onClick={toggleAudio}
     ></button>
