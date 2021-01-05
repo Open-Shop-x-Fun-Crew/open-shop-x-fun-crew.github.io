@@ -29,6 +29,7 @@ const ExpandingDiv = styled.div`
 export default function Splash(props) {
   return (
     <ExpandingDiv animationCenter={props.animationCenter}>
+      <AudioButton getIconPos={props.getIconPos} />
       <div className={styles.splash} style={{ zIndex: props.onTop ? 90 : 0 }}>
         <video
           className={styles.bgVid}
@@ -53,11 +54,7 @@ export default function Splash(props) {
             <source src={distressedFg} type="video/mp4" />
             Sorry, your browser doesn't support embedded videos.
           </video>
-          <AudioButton
-            className={styles.audioButton}
-            getIconPos={props.getIconPos}
-            isVisible={props.isVisible}
-          />
+
           {/* generic tags can't be inside video elements, audio tag had to be moved out */}
         </div>
       </div>

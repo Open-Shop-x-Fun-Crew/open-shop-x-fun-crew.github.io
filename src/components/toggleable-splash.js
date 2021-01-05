@@ -29,7 +29,7 @@ export default function ToggleableSplash(props) {
     toggleState()
   }
 
-  function getIconPos(e, icon) {
+  function getIconPos(icon) {
     if (icon) {
       let iconPos = icon.getBoundingClientRect()
       setAudioIconPos(
