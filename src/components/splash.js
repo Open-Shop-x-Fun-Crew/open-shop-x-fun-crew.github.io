@@ -47,6 +47,7 @@ export default function Splash(props) {
 
   return (
     <ExpandingDiv animationCenter={props.animationCenter}>
+      <AudioButton getIconPos={props.getIconPos} />
       <div className={styles.splash} style={{ zIndex: props.onTop ? 90 : 0 }}>
         <video
           type="video/mp4"
@@ -73,11 +74,7 @@ export default function Splash(props) {
             poster={`/splashvids/fg_poster_${index}.png`}
             playsInline={true}
           ></video>
-          <AudioButton
-            className={styles.audioButton}
-            getIconPos={props.getIconPos}
-            isVisible={props.isVisible}
-          />
+
           {/* generic tags can't be inside video elements, audio tag had to be moved out */}
         </div>
       </div>
