@@ -15,14 +15,25 @@
 }
 
 .mainVid {
-  width: 60vw;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: 50% 50%;
 }
 
 .inner {
-  position: absolute;
-  width: fit-content;
-  height: fit-content;
-  border: 5px solid black;
+  display: flex;
+  align-items: center;
+  max-width: 80vw;
+  height: 80vh;
   position: relative;
+  video {
+    border: 10px solid black;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    display: none;
+  }
 }
