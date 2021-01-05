@@ -1,31 +1,26 @@
-@import './colours.scss';
-
-.filmstrip {
+.playwrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 8rem;
-  margin-bottom: 1rem;
+  padding-bottom: 20px;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
+.player {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.image {
+.closebtn {
   position: absolute;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  z-index: 100;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 900;
+  top: 20px;
+  right: 20px;
 }
 
-.title,
-.description {
-  z-index: 100;
-  color: $white;
-  line-height: 1.7rem;
-  font-size: 1.3rem;
+.caption {
+  color: black;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
   text-align: center;
 }
