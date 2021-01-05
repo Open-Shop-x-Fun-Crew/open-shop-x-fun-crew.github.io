@@ -1,0 +1,26 @@
+.playwrapper {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.player {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.closebtn {
+  position: absolute;
+  z-index: 100;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 900;
+  top: 20px;
+  right: 20px;
+}
+
+.caption {
+  color: black;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
