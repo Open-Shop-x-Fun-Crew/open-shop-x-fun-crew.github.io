@@ -1,9 +1,22 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "open-shop-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Portfolio site created for Martin Sandin nad Viktor Annerstål",
   "version": "0.1.0",
   "license": "0BSD",
+  "contributers": [
+    { "name" : "Sofia Darke"
+    , "email" : "sofia.darke@hyperisland.se"
+    }, { "name" : "Saeid Fattahi"
+      , "email" : "saeid.fattahi@hyperisland.se"
+      }, { "name" : "Neha Hirve"
+        , "email" : "neha.hirve@hyperisland.se"
+        , "url" : "http://nehahirve.github.io/"
+        }, { "name" : "Saghar Noursobhi"
+          }, { "name" : "Emma Scott-Allen"
+            , "email" : "emma.scottallen@hyperisland.se"
+            }
+        ],
   "scripts": {
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
