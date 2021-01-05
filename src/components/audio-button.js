@@ -1,14 +1,24 @@
 import React, { useRef, useEffect } from 'react'
-
+import Music from '../../static/splashaudio/test-audio-file.mp3'
 import styles from './audio-button.module.scss'
+
+const audio = new Audio(Music)
 
 export default function AudioButton(props) {
   const icon = useRef()
 
-  useEffect(() => props.getIconPos(icon.current), [])
+  useEffect(() => props.getIconPos(icon.current), [icon.current])
+
+  useEffect(() => {
+    return () => {
+      audio.pause()
+      audio.currentTime = 0
+    }
+  }, [])
+
 
   function toggleAudio() {
-    console.log('audio')
+    audio.paused ? audio.play() : audio.pause()    
   }
 
   return (
@@ -17,6 +27,7 @@ export default function AudioButton(props) {
       className={`${styles.audio} ${props.className}`}
       ref={icon}
       onClick={toggleAudio}
-    ></button>
+    ><source src={Music} type="mp3" />
+    </button>
   )
 }
