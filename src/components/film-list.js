@@ -6,9 +6,7 @@ import styles from './film-list.module.scss'
 import filmInfo from '../films/films.json'
 
 export default function FilmList(props) {
-
   const filmListItems = filmInfo.films.map(film => {
-
     return (
       <ToggleableFilm
         image={`screenshots/${film.filmScreenshot}`}
@@ -20,11 +18,9 @@ export default function FilmList(props) {
     )
   })
 
-
   return (
     <ul className={styles.filmList} id="film-list">
       {filmListItems}
     </ul>
   )
-
 }
