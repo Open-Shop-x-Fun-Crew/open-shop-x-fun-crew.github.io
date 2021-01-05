@@ -8,7 +8,7 @@ export default function AudioButton(props) {
   useEffect(() => props.getIconPos(icon.current), [])
 
   function toggleAudio() {
-    console.log('audio playing')
+    console.log('audio')
   }
 
   return (

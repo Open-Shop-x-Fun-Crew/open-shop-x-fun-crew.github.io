@@ -56,7 +56,8 @@ export default function Splash(props) {
           playsInline={true}
           width="100%"
           height="100%"
-        ></video>
+        >
+ Sorry, your browser doesn't support embedded videos.</video>
 
         <div className={styles.inner}>
           <video
@@ -67,7 +68,9 @@ export default function Splash(props) {
             muted={true}
             poster={`/splashvids/fg_poster_${index}.png`}
             playsInline={true}
-          ></video>
+          >
+            Sorry, your browser doesn't support embedded videos.
+          </video>
 
           {/* generic tags can't be inside video elements, audio tag had to be moved out */}
         </div>
