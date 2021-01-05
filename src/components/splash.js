@@ -38,11 +38,7 @@ export default function Splash(props) {
   const [index, setIndex] = useState(getRandom(noOfSplashVids))
 
   function next() {
-    if (index === noOfSplashVids) {
-      setIndex(1)
-    } else {
-      setIndex(index => index + 1)
-    }
+    setIndex(index => (index === noOfSplashVids ? 1 : index + 1))
   }
 
   return (
@@ -55,7 +51,6 @@ export default function Splash(props) {
           src={`/splashvids/bg_${index}.mp4`}
           autoPlay={true}
           onEnded={next}
-          preload="auto"
           muted={true}
           poster={`/splashvids/bg_poster_${index}.png`}
           playsInline={true}
@@ -69,7 +64,6 @@ export default function Splash(props) {
             className={styles.mainVid}
             src={`/splashvids/fg_${index}.mp4`}
             autoPlay={true}
-            preload="metadata"
             muted={true}
             poster={`/splashvids/fg_poster_${index}.png`}
             playsInline={true}
