@@ -13,6 +13,22 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>OpenShop</title>
+        <meta name="title" content="Open Shop filmmaking" />
+        <meta
+          name="description"
+          content="Open Shop is filmmaking duo Martin Sandin & Viktor Annerstål. Martin writes and directs. Viktor edits and shoots."
+        />
+        <meta
+          name="keywords"
+          content="filmmaking, stockholm, sweden, documentaries, documentary, street, mad dog from chaos to comeback, distressed, dimmiga dar, short film, photography, video, trailer, films, movies, openshop, open shop, art, artistic, filmskapande, dokumentärer, dokumentär, gata, kort film, fotografi, filmer, Martin sandin, viktor Annerstål, konst, konstnärlig"
+        />
+        <meta name="robots" content="index, follow"></meta>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
+        <meta name="author" content="OpenShop" />
+      </Helmet>
       <main>
         <div id="#top" />
         <ToggleableSplash
