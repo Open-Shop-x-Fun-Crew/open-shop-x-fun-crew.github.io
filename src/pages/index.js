@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import FilmList from '../components/film-list'
 import Footer from '../components/footer'
 import ToggleableSplash from '../components/toggleable-splash'
+import { Helmet } from 'react-helmet'
 
 export default function Home() {
   const [splashVisible, setSplashVisible] = useState(true)
