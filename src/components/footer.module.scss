@@ -35,3 +35,9 @@ address {
     color: $white;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  address {
+    font-size: 1.5rem;
+  }
+}
