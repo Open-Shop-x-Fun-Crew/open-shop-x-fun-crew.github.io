@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AudioButton from '../components/audio-button.js'
 import styles from './splash.module.scss'
 import styled, { keyframes } from 'styled-components'
+import { isMobile } from 'react-device-detect'
 
 import filmInfo from '../films/films.json'
 
@@ -20,6 +21,7 @@ const expand = pos => keyframes`
   `
 
 const ExpandingDiv = styled.div`
+  height: ${isMobile ? 90 : 100}vh;
   position: absolute;
   top: 0;
   animation: ${props => expand(props.animationCenter)}

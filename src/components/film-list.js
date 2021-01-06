@@ -9,6 +9,7 @@ export default function FilmList(props) {
   const filmListItems = filmInfo.films.map(film => {
     return (
       <ToggleableFilm
+        key={filmInfo.films.indexOf(film)}
         image={`screenshots/${film.filmScreenshot}`}
         title={film.filmTitle}
         description={film.filmDescription}

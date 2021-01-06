@@ -3,6 +3,7 @@ import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
 import styles from './info.module.scss'
 import { Link } from 'react-scroll'
+import { isMobile } from 'react-device-detect'
 import styled, { keyframes } from 'styled-components'
 
 const expand = pos => keyframes`
@@ -14,6 +15,7 @@ from {
 `
 
 const ExpandingDiv = styled.div`
+  height: ${isMobile ? 90 : 100}vh;
   position: absolute;
   top: 0;
   animation: ${props => expand(props.animationCenter)} 500ms linear;
