@@ -28,6 +28,9 @@ export default function Home() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="author" content="OpenShop" />
+        <link rel="preload" href="splashvids/bg_1.mp4" as="video"></link>
+        <link rel="preload" href="splashvids/bg_2.mp4" as="video"></link>
+        <link rel="preload" href="splashvids/bg_3.mp4" as="video"></link>
       </Helmet>
       <main>
         <div id="#top" />
