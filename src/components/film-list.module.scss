@@ -3,14 +3,8 @@ ul {
   min-height: 65vh;
 }
 
-.isPlaying {
-  margin-top: 0;
-}
-
 .filmList {
   display: flex;
   flex-direction: column;
   width: 100%;
-  position: relative;
-  z-index: 100;
 }
