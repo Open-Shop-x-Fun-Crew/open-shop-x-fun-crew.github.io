@@ -7,12 +7,10 @@ import filmInfo from '../films/films.json'
 
 const noOfSplashVids = filmInfo.splashVideos
 
-function getRandom(number, previousNumber) {
-  let randomNumber = Math.floor(Math.random() * number) + 1
-  return randomNumber
+function getRandom(number) {
+  return Math.floor(Math.random() * number) + 1
 }
 
-// test
 const expand = pos => keyframes`
   from {
     clip-path: circle(0% at ${pos.x}px ${pos.y}px)
