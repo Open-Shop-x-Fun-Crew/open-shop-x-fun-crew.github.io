@@ -22,7 +22,6 @@ const expand = pos => keyframes`
 
 const ExpandingDiv = styled.div`
   height: 100vh;
-
   position: absolute;
   top: 0;
   animation: ${props => expand(props.animationCenter)}
