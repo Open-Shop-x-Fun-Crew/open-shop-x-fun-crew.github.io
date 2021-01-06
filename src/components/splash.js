@@ -4,6 +4,7 @@ import styles from './splash.module.scss'
 import styled, { keyframes } from 'styled-components'
 
 import filmInfo from '../films/films.json'
+import { Helmet } from 'react-helmet'
 
 const noOfSplashVids = filmInfo.splashVideos
 
@@ -42,6 +43,22 @@ export default function Splash(props) {
     <ExpandingDiv animationCenter={props.animationCenter}>
       <AudioButton getIconPos={props.getIconPos} />
       <div className={styles.splash} style={{ zIndex: props.onTop ? 90 : 0 }}>
+        <Helmet>
+          <title>OpenShop</title>
+          <meta name="title" content="Open Shop filmmaking" />
+          <meta
+            name="description"
+            content="Open Shop is filmmaking duo Martin Sandin & Viktor Annerstål. Martin writes and directs. Viktor edits and shoots."
+          />
+          <meta
+            name="keywords"
+            content="filmmaking, stockholm, sweden, documentaries, documentary, street, mad dog from chaos to comeback, distressed, dimmiga dar, short film, photography, video, trailer, films, movies, openshop, open shop, art, artistic, filmskapande, dokumentärer, dokumentär, gata, kort film, fotografi, filmer, Martin sandin, viktor Annerstål, konst, konstnärlig"
+          />
+          <meta name="robots" content="index, follow"></meta>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="author" content="OpenShop" />
+        </Helmet>
         <video
           type="video/mp4"
           className={styles.bgVid}
