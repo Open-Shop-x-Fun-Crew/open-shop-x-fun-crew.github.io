@@ -15,7 +15,7 @@ from {
 `
 
 const ExpandingDiv = styled.div`
-  height: ${isMobile ? 90 : 100}vh;
+  height: ${props => (isMobile ? props.height + 'px' : '100vh')};
   position: absolute;
   top: 0;
   animation: ${props => expand(props.animationCenter)} 500ms linear;
@@ -29,13 +29,18 @@ export default function Info(props) {
   // const sethiddenEmail = useStateReturn[1]
 
   const [hiddenEmail, sethiddenEmail] = useState(true)
-
+  const [height, setHeight] = useState(null)
   function togglehiddenEmail() {
     sethiddenEmail(!hiddenEmail)
   }
 
+  useState(() => {
+    setHeight(window.innerHeight)
+  })
+
   return (
     <ExpandingDiv
+      height={height}
       animationCenter={props.animationCenter}
       style={{ zIndex: props.onTop ? 90 : 0 }}
     >
