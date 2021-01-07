@@ -1,7 +1,7 @@
 @import './colours';
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .links {
@@ -86,9 +86,10 @@ figcaption {
 }
 .kick {
   color: $black;
+  z-index: 100;
   grid-column: 2/4;
   grid-row: 2/3;
-  cursor: pointer;
+  cursor: auto;
   p {
     margin-top: 0.2rem;
     font-size: 1.5rem;
@@ -98,6 +99,7 @@ figcaption {
 .kick button {
   font-family: 'cormorant';
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
