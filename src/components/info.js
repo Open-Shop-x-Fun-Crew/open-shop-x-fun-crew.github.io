@@ -51,17 +51,19 @@ export default function Info(props) {
             src={martin}
             alt="Martin as a child with his father, on the beach."
           />
-          <figcaption>Martin 1985.</figcaption>
+          <figcaption>Martin Sandin</figcaption>
         </figure>
         <section className={styles.kick}>
-          <button onClick={togglehiddenEmail}>kick up some dust</button>
+          <button onClick={togglehiddenEmail}>We’re open</button>
           <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
         </section>
         <div className={styles.infotext}>
           <h1>
-            Open Shop is filmmaking duo Martin Sandin &amp; Viktor Annerstål.
+            Open Shop is filmmaking duo Martin Sandin & Viktor Annerstål.
             <br />
-            Martin writes and directs. Viktor edits and shoots.
+            Martin is the director and screenwriter. Viktor the DoP and editor.
+            We believe in making a difference through stories. Let’s do it
+            together.
           </h1>
         </div>
         <figure className={styles.viktor}>
@@ -70,13 +72,16 @@ export default function Info(props) {
             src={viktor}
             alt="Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
           />
-          <figcaption>Viktor 1993.</figcaption>
+          <figcaption>Viktor Annerståhl</figcaption>
         </figure>
         <a
           href="https://www.instagram.com/artandpoeticjustice/?hl=en"
           className={`${styles.links} ${styles.skate}`}
         >
-          slow-skate with us
+          Follow Open Shop
+        </a>
+        <a href="to blog page" className={`${styles.links} ${styles.blog}`}>
+          On the road
         </a>
 
         <Link

@@ -38,6 +38,7 @@
   // border: solid green 3px;
   position: absolute;
   bottom: 0;
+  padding-bottom: 1em; //the caption is not below the film..
 }
 
 @media only screen and (max-width: 600px) {
