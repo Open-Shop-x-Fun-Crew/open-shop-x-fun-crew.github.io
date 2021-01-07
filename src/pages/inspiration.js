@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
 
@@ -23,25 +23,25 @@ export const query = graphql`
 export default function Inspiration({ data }) {
   const posts = data.allMdx.nodes.map(papaya => {
     return (
-      <div >
+      <article key={data.allMdx.nodes.indexOf(papaya)}>
         <h1>{papaya.frontmatter.title}</h1>
         <h2>{papaya.frontmatter.date.slice(0, 10)}</h2>
-        <ReactMarkdown allowDangerousHtml={true} className='post'>
-        {papaya.rawBody}
+        <ReactMarkdown allowDangerousHtml={true} className="post">
+          {papaya.rawBody}
         </ReactMarkdown>
-      </div>
+      </article>
     )
   })
 
   return (
     <>
       <Helmet></Helmet>
-      <div
+      <main
         className="box"
         style={{ width: '100vw', height: '100vh', border: '2px solid red' }}
       >
         {posts}
-      </div>
+      </main>
     </>
   )
 }

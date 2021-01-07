@@ -1,13 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LogoButton from '../components/logo-button'
 import Splash from '../components/splash'
 import Info from '../components/info'
 import useDelayedUnmounting from '../hooks/use-delayed-unmounting'
+import { isMobile } from 'react-device-detect'
 
 export default function ToggleableSplash(props) {
   const [state, show, hide] = useDelayedUnmounting(510)
   const [clickPosSplash, setClickPosSplash] = useState({ x: 0, y: 0 })
   const [clickPosInfo, setClickPosInfo] = useState({ x: 0, y: 0 })
+  const [height, setHeight] = useState(null)
+
+  useEffect(() => {
+    if (isMobile) setHeight(window.innerHeight)
+  }, [])
 
   function toggleState() {
     state === 'mounted' ? hide() : show()
@@ -30,10 +36,18 @@ export default function ToggleableSplash(props) {
         splashVisible={props.splashVisible}
       />
       {state !== 'unmounted' && (
-        <Info animationCenter={clickPosInfo} onTop={!props.splashVisible} />
+        <Info
+          animationCenter={clickPosInfo}
+          onTop={!props.splashVisible}
+          mobileHeight={height}
+        />
       )}
       {state !== 'mounted' && (
-        <Splash animationCenter={clickPosSplash} onTop={props.splashVisible} />
+        <Splash
+          animationCenter={clickPosSplash}
+          onTop={props.splashVisible}
+          isMobile={isMobile}
+        />
       )}
     </div>
   )

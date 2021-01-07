@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function useDelayedUnmounting(time = 0) {
   const [state, setState] = React.useState('unmounted')

@@ -3,7 +3,6 @@ import martin from '../../static/images/martin.png'
 import viktor from '../../static/images/viktor.png'
 import styles from './info.module.scss'
 import { Link } from 'react-scroll'
-import { isMobile } from 'react-device-detect'
 import styled, { keyframes } from 'styled-components'
 
 const expand = pos => keyframes`
@@ -15,7 +14,7 @@ from {
 `
 
 const ExpandingDiv = styled.div`
-  height: ${props => (isMobile ? props.height + 'px' : '100vh')};
+  height: ${props => (props.height ? props.height + 'px' : '100vh')};
   position: absolute;
   top: 0;
   animation: ${props => expand(props.animationCenter)} 500ms linear;
@@ -23,24 +22,15 @@ const ExpandingDiv = styled.div`
 `
 
 export default function Info(props) {
-  /* this is the old way of doing it, helps me understand better, leave for now @emma */
-  // const useStateReturn = useState()
-  // const hiddenEmail = useStateReturn[0]
-  // const sethiddenEmail = useStateReturn[1]
-
   const [hiddenEmail, sethiddenEmail] = useState(true)
-  const [height, setHeight] = useState(null)
+
   function togglehiddenEmail() {
     sethiddenEmail(!hiddenEmail)
   }
 
-  useState(() => {
-    setHeight(window.innerHeight)
-  })
-
   return (
     <ExpandingDiv
-      height={height}
+      height={props.mobileHeight}
       animationCenter={props.animationCenter}
       style={{ zIndex: props.onTop ? 90 : 0 }}
     >

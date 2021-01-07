@@ -2,7 +2,6 @@ import React from 'react'
 import ReactPlayer from 'react-player/vimeo'
 
 import styles from './player.module.scss'
-import ToggleableFilm from './toggleable-film'
 
 export default function Player(props) {
   return (
@@ -17,9 +16,9 @@ export default function Player(props) {
         height="90%"
         className={styles.player}
       />
-      <div className={styles.closebtn} onClick={props.togglePlayer}>
+      <button className={styles.closebtn} onClick={props.togglePlayer}>
         &#10005;
-      </div>
+      </button>
       <div className={styles.info}>
         <p className={styles.caption}>{props.title}</p>
         <p className={styles.caption}>{props.description}</p>

@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Player from '../components/player'
 import { Link } from 'react-scroll'
 
 import styles from './toggleable-film.module.scss'
 
 export default function ToggleableFilm(props) {
-  console.log(props.id, props.url)
   if (props.title === props.currentTrailer) {
     return (
       <Player
