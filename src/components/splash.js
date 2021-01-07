@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import AudioButton from '../components/audio-button.js'
 import styles from './splash.module.scss'
 import styled, { keyframes } from 'styled-components'
 import { isMobile } from 'react-device-detect'
@@ -42,7 +41,6 @@ export default function Splash(props) {
 
   return (
     <ExpandingDiv animationCenter={props.animationCenter}>
-      <AudioButton getIconPos={props.getIconPos} />
       <div className={styles.splash} style={{ zIndex: props.onTop ? 90 : 0 }}>
         <video
           type="video/mp4"

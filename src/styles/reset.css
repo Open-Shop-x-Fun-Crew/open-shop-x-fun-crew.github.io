@@ -1,4 +1,4 @@
-/* padding and margin no longer affect sizing*/
+padding and margin no longer affect sizing
 * {
   box-sizing: border-box;
 }
