@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import ReactMarkdown from 'react-markdown'
 
 export const query = graphql`
   query blogQuery {
@@ -20,12 +21,14 @@ export const query = graphql`
 `
 
 export default function Inspiration({ data }) {
-  const posts = data.allMdx.nodes.map(node => {
+  const posts = data.allMdx.nodes.map(papaya => {
     return (
-      <div className="post">
-        <h1>{node.frontmatter.title}</h1>
-        <h2>{node.frontmatter.date}</h2>
-        <p>{node.rawBody}</p>
+      <div >
+        <h1>{papaya.frontmatter.title}</h1>
+        <h2>{papaya.frontmatter.date.slice(0, 10)}</h2>
+        <ReactMarkdown allowDangerousHtml={true} className='post'>
+        {papaya.rawBody}
+        </ReactMarkdown>
       </div>
     )
   })
