@@ -47,11 +47,11 @@ export default function Splash(props) {
         <video
           type="video/mp4"
           className={styles.bgVid}
-          src={`splashvids/bg_${index}.mp4`}
+          src={`splashvids/${isMobile ? 'mb' : 'bg'}_${index}.mp4`}
           autoPlay={true}
           onEnded={next}
           muted={true}
-          poster={`splashvids/bg_poster_${index}.png`}
+          poster={`splashvids/${isMobile ? 'mb' : 'bg'}_poster_${index}.png`}
           playsInline={true}
           width="100%"
           height="100%"
@@ -61,18 +61,17 @@ export default function Splash(props) {
 
         <div className={styles.inner}>
           <video
+            style={{ display: ` ${isMobile ? 'none' : 'block'}` }}
             type="video/mp4"
             className={styles.mainVid}
-            src={`splashvids/fg_${index}.mp4`}
+            src={isMobile ? '' : `splashvids/fg_${index}.mp4`}
             autoPlay={true}
             muted={true}
-            poster={`splashvids/fg_poster_${index}.png`}
+            poster={isMobile ? '' : `splashvids/fg_poster_${index}.mp4`}
             playsInline={true}
           >
             Sorry, your browser doesn't support embedded videos.
           </video>
-
-          {/* generic tags can't be inside video elements, audio tag had to be moved out */}
         </div>
       </div>
     </ExpandingDiv>
