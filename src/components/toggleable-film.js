@@ -4,18 +4,11 @@ import Player from '../components/player'
 import styles from './toggleable-film.module.scss'
 
 export default function ToggleableFilm(props) {
-  console.log(props.title)
-  const [playing, setPlaying] = useState(false)
 
-  function togglePlayer() {
-    setPlaying(!playing)
-  }
-
-  if (playing) {
+  if (props.title === props.currentTrailer) {
     return (
       <Player
         url={props.url}
-        togglePlayer={togglePlayer}
         title={props.title}
         description={props.description}
       />
@@ -28,7 +21,7 @@ export default function ToggleableFilm(props) {
         src={props.image}
         alt={props.alt}
         className={styles.image}
-        onClick={togglePlayer}
+        onClick={(e) => props.togglePlayer(e, props.title)}
       />
       <div className={styles.info}>
         <p className={styles.title}>{props.title}</p>
