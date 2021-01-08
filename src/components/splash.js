@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './splash.module.scss'
 import styled, { keyframes } from 'styled-components'
 
@@ -28,9 +28,9 @@ const ExpandingDiv = styled.div`
 `
 
 export default function Splash(props) {
-  const [index, setIndex] = useState(
-    Math.floor(Math.random() * noOfSplashVids) + 1
-  )
+  const [index, setIndex] = useState(null)
+
+  useEffect(() => setIndex(Math.floor(Math.random() * noOfSplashVids) + 1), [])
 
   function next() {
     setIndex(index => (index === noOfSplashVids ? 1 : index + 1))

@@ -28,23 +28,27 @@ export default function Home() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="author" content="OpenShop" />
+        <meta name="viewport" content-width="device-width" initial-scale={1} />
         <link
           rel="preload"
           href="splashvids/fg_1.mp4"
           as="video"
           type="video/mp4"
+          media="(min-width: 600px)"
         ></link>
         <link
           rel="preload"
           href="splashvids/fg_2.mp4"
           as="video"
           type="video/mp4"
+          media="(min-width: 600px)"
         ></link>
         <link
           rel="preload"
           href="splashvids/fg_3.mp4"
           as="video"
           type="video/mp4"
+          media="(min-width: 600px)"
         ></link>
       </Helmet>
       <main>
