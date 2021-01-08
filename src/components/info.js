@@ -62,7 +62,7 @@ export default function Info(props) {
             src={viktor}
             alt="Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
           />
-          <figcaption>Viktor Annerståhl</figcaption>
+          <figcaption>Viktor Annerstål</figcaption>
         </figure>
         <a
           href="https://www.instagram.com/artandpoeticjustice/?hl=en"

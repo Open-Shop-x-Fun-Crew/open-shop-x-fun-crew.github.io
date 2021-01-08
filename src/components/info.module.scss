@@ -117,14 +117,15 @@ figcaption {
   align-items: center;
   padding-top: 20px;
   padding-right: 20px;
+  transition: all 0.2s ease-in-out;
 }
 
 .skate:hover,
 .kick:hover,
 .blog:hover,
 .lookhere:hover {
-  color: rgb(11, 11, 11);
-  transform: scale(1.008);
+  color: rgb(21, 21, 21);
+  transform: scale(1.01);
 }
 
 @media only screen and (max-width: 600px) {
