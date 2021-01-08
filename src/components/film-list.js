@@ -6,7 +6,7 @@ import styles from './film-list.module.scss'
 import filmInfo from '../films/films.json'
 
 export default function FilmList(props) {
-  const [currentTrailer, setCurrentTrailer] = useState('Mad Dog')
+  const [currentTrailer, setCurrentTrailer] = useState(null)
 
   function togglePlayer(e, title) {
     setCurrentTrailer(title)
