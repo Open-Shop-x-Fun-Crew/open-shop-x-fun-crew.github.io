@@ -3,6 +3,7 @@ import martin from '../../static/images/martin.jpg'
 import viktor from '../../static/images/viktor.jpg'
 import styles from './info.module.scss'
 import { Link } from 'react-scroll'
+import { Link as GatsbyLink } from 'gatsby'
 import styled, { keyframes } from 'styled-components'
 
 const expand = pos => keyframes`
@@ -70,9 +71,12 @@ export default function Info(props) {
         >
           Follow Open Shop
         </a>
-        <a href="to blog page" className={`${styles.links} ${styles.blog}`}>
+        <GatsbyLink
+          to="/inspiration"
+          className={`${styles.links} ${styles.blog}`}
+        >
           On the road
-        </a>
+        </GatsbyLink>
 
         <Link
           className={styles.lookhere}
