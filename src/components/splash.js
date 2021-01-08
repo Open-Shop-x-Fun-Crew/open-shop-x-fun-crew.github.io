@@ -6,10 +6,6 @@ import filmInfo from '../films/films.json'
 
 const noOfSplashVids = filmInfo.splashVideos
 
-function getRandom(number) {
-  return Math.floor(Math.random() * number) + 1
-}
-
 const expand = pos => keyframes`
   from {
     clip-path: circle(0% at ${pos.x}px ${pos.y}px)
@@ -32,7 +28,9 @@ const ExpandingDiv = styled.div`
 `
 
 export default function Splash(props) {
-  const [index, setIndex] = useState(getRandom(noOfSplashVids))
+  const [index, setIndex] = useState(
+    Math.floor(Math.random() * noOfSplashVids) + 1
+  )
 
   function next() {
     setIndex(index => (index === noOfSplashVids ? 1 : index + 1))
