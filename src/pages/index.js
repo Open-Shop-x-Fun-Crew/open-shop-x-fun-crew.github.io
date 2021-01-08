@@ -50,6 +50,27 @@ export default function Home() {
           type="video/mp4"
           media="(min-width: 600px)"
         ></link>
+        <link
+          rel="preload"
+          href="splashvids/mb_1.mp4"
+          as="video"
+          type="video/mp4"
+          media="(max-width: 600px)"
+        ></link>
+        <link
+          rel="preload"
+          href="splashvids/mb_2.mp4"
+          as="video"
+          type="video/mp4"
+          media="(max-width: 600px)"
+        ></link>
+        <link
+          rel="preload"
+          href="splashvids/mb_3.mp4"
+          as="video"
+          type="video/mp4"
+          media="(max-width: 600px)"
+        ></link>
       </Helmet>
       <main>
         <div id="#top" />
