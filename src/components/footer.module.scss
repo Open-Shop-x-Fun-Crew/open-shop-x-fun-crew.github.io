@@ -32,6 +32,7 @@ address {
   border-radius: 50%;
   &:hover {
     background: $grey;
+    cursor: pointer;
   }
 }
 
