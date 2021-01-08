@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import martin from '../../static/images/martin.png'
-import viktor from '../../static/images/viktor.png'
+import martin from '../../static/images/martin.jpg'
+import viktor from '../../static/images/viktor.jpg'
 import styles from './info.module.scss'
 import { Link } from 'react-scroll'
 import styled, { keyframes } from 'styled-components'

@@ -50,7 +50,7 @@ export default function Splash(props) {
           muted={true}
           poster={`splashvids/${
             props.isMobile ? 'mb' : 'bg'
-          }_poster_${index}.png`}
+          }_poster_${index}.jpg`}
           playsInline={true}
           width="100%"
           height="100%"
@@ -66,7 +66,7 @@ export default function Splash(props) {
             src={props.isMobile ? '' : `splashvids/fg_${index}.mp4`}
             autoPlay={true}
             muted={true}
-            poster={props.isMobile ? '' : `splashvids/fg_poster_${index}.mp4`}
+            poster={props.isMobile ? '' : `splashvids/fg_poster_${index}.jpg`}
             playsInline={true}
           >
             Sorry, your browser doesn't support embedded videos.
