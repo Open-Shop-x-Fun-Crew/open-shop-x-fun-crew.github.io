@@ -30,8 +30,10 @@ address {
   font-weight: bold;
   font-size: 1rem;
   border-radius: 50%;
+  margin-bottom: 1rem;
   &:hover {
     background: $grey;
+    transform: scale(1.01);
     cursor: pointer;
   }
 }

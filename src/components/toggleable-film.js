@@ -11,6 +11,7 @@ export default function ToggleableFilm(props) {
         url={props.url}
         title={props.title}
         description={props.description}
+        togglePlayer={props.togglePlayer}
       />
     )
   }
