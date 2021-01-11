@@ -1,6 +1,5 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Node.js CI
 
 on:
@@ -30,4 +29,14 @@ jobs:
     - run: npm run build --if-present
     - run: git config --global user.email "neha.hirve@hyperisland.se"
     - run: git config --global user.name "nehahirve"
-    - run: npm run deploy
+  
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: . # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
