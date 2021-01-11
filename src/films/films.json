@@ -1,0 +1,34 @@
+{
+  "films": [
+    {
+      "filmTitle": "Distressed",
+      "filmDescription": "Short Film 2020. 15min",
+      "filmScreenshot": "distressed.jpg",
+      "filmTagline": "Description of film",
+      "filmURL": "https://vimeo.com/469563520"
+    },
+    {
+      "filmTitle": "Lucas & Steve - Another Life ft. Alida",
+      "filmDescription": "Music video 2020. 3min",
+      "filmScreenshot": "another-life.jpg",
+      "filmTagline": "Description of film",
+      "filmURL": "https://www.youtube.com/watch?v=sXJVakJ5vxQ"
+    },
+    {
+      "filmTitle": "Dimmiga Dar",
+      "filmDescription": "Short Film 2019. 17min",
+      "filmScreenshot": "dimmiga-dar.jpg",
+      "filmTagline": "Description of film",
+      "filmURL": "https://vimeo.com/258888984"
+    },
+    {
+      "filmTitle": "Mad Dog",
+      "filmDescription": "Documentary 2016. 85min",
+      "filmScreenshot": "mad-dog.jpg",
+      "filmTagline": "Description of film",
+      "filmURL": "https://vimeo.com/297684755"
+    }
+  ],
+
+  "splashVideos": 4
+}

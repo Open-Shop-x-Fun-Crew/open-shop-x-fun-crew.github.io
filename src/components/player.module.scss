@@ -1,0 +1,62 @@
+@import './colours';
+
+.playwrapper {
+  position: relative;
+  width: 100vw;
+  max-height: 100vh;
+  padding-top: 55.25%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // border: 2px solid black;
+}
+
+.player {
+  // border: 2px solid blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $black;
+}
+
+.closebtn {
+  z-index: 100;
+  position: absolute;
+  right: 2rem;
+  width: 1rem;
+  height: 1rem;
+  border: solid $black;
+  cursor: pointer;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: rotate(-135deg) translateY(10%) translateX(10%);
+    -webkit-transform: rotate(-135deg) translateY(10%) translateX(10%);
+  }
+}
+
+.caption {
+  color: $black;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.infoBar {
+  top: -3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .infoBar {
+    top: -1rem;
+    bottom: 1rem;
+  }
+}

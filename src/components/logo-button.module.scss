@@ -1,0 +1,32 @@
+@import './colours';
+
+.button {
+  z-index: 100;
+  transform: translateX(-50%) translateY(-50%);
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 0.01rem solid $black;
+  background: $grey;
+  text-align: center;
+  font-family: 'cormorant';
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 50%;
+}
+
+.moving {
+  position: fixed;
+  cursor: none;
+  border: none;
+}
+
+.sticky {
+  position: absolute;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $white;
+    transform: translateX(-50%) translateY(-50%) scale(1.01);
+    cursor: pointer;
+  }
+}
