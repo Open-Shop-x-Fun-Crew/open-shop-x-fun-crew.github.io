@@ -41,9 +41,15 @@ export default function Inspiration({ data }) {
     <>
       <Helmet></Helmet>
       <main className={styles.box} style={{ width: '100vw' }}>
-        {posts}
-        <div>
-          <Link to={'/'}>Go back to page button</Link>
+        <div className={styles.blogBody}>
+          <div className={styles.top_container}>
+            <div className={styles.header}>Open Shop Blog</div>
+            <Link to={'/'}>
+              Go back to page button className={styles.homeBtn}> going <br></br>{' '}
+              home
+            </Link>
+          </div>
+          {posts}
         </div>
       </main>
     </>

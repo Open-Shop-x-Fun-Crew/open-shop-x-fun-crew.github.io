@@ -37,59 +37,62 @@ export default function Info(props) {
       animationCenter={props.animationCenter}
       style={{ zIndex: props.onTop ? 90 : 0 }}
     >
-      <div id="info" className={styles.info}>
-        <figure className={styles.martin}>
-          <img
-            className={styles.portrait}
-            src={martin}
-            alt="Martin as a child with his father, on the beach."
-          />
-          <figcaption>Martin Sandin</figcaption>
-        </figure>
-        <section className={styles.kick}>
-          <button onClick={togglehiddenEmail}>We’re open</button>
-          <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
-        </section>
-        <div className={styles.infotext}>
-          <h1>
-            Open Shop is filmmaking duo Martin Sandin & Viktor Annerstål.
-            <br />
-            Martin is the director and screenwriter. Viktor the DoP and editor.
-            We believe in making a difference through stories. Let’s do it
-            together.
-          </h1>
-        </div>
-        <figure className={styles.viktor}>
-          <img
-            className={styles.portrait}
-            src={viktor}
-            alt="Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
-          />
-          <figcaption>Viktor Annerstål</figcaption>
-        </figure>
-        <a
-          href="https://www.instagram.com/artandpoeticjustice/?hl=en"
-          className={`${styles.links} ${styles.skate}`}
-        >
-          Follow Open Shop
-        </a>
-        <GatsbyLink
-          to="/inspiration"
-          className={`${styles.links} ${styles.blog}`}
-        >
-          On the road
-        </GatsbyLink>
+      <div className={styles.background}>
+        <div className={styles.bottomBar}></div>
+        <div id="info" className={styles.info}>
+          <figure className={styles.martin}>
+            <img
+              className={styles.portrait}
+              src={martin}
+              alt="Martin as a child with his father, on the beach."
+            />
+            <figcaption>Martin Sandin</figcaption>
+          </figure>
+          <section className={styles.kick}>
+            <button onClick={togglehiddenEmail}>We’re open</button>
+            <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
+          </section>
+          <div className={styles.infotext}>
+            <h1>
+              Open Shop is filmmaking duo Martin Sandin & Viktor Annerstål.
+              <br />
+              Martin is the director and screenwriter. Viktor the DoP and
+              editor. We believe in making a difference through stories. Let’s
+              do it together.
+            </h1>
+          </div>
+          <figure className={styles.viktor}>
+            <img
+              className={styles.portrait}
+              src={viktor}
+              alt="Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
+            />
+            <figcaption>Viktor Annerstål</figcaption>
+          </figure>
+          <a
+            href="https://www.instagram.com/artandpoeticjustice/?hl=en"
+            className={`${styles.links} ${styles.skate}`}
+          >
+            Follow Open Shop
+          </a>
+          <GatsbyLink
+            to="/inspiration"
+            className={`${styles.links} ${styles.blog}`}
+          >
+            On the road
+          </GatsbyLink>
 
-        <Link
-          className={styles.lookhere}
-          activeClass="active"
-          to="film-list"
-          spy={true}
-          smooth={true}
-          duration={500}
-        >
-          look here
-        </Link>
+          <Link
+            className={styles.lookhere}
+            activeClass="active"
+            to="film-list"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            look here
+          </Link>
+        </div>
       </div>
     </ExpandingDiv>
   )
