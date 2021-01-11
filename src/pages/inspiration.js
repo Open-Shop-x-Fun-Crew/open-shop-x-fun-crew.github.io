@@ -44,9 +44,9 @@ export default function Inspiration({ data }) {
         <div className={styles.blogBody}>
           <div className={styles.top_container}>
             <div className={styles.header}>Open Shop Blog</div>
-            <Link to={'/'}>
-              Go back to page button className={styles.homeBtn}> going <br></br>{' '}
-              home
+            <Link to={'/'} className={styles.homeBtn}>
+              {' '}
+              going <br></br> home
             </Link>
           </div>
           {posts}
