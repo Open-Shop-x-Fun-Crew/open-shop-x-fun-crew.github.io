@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
+import styles from '../components/blog.module.scss'
 
 export const query = graphql`
   query blogQuery {
@@ -23,9 +24,12 @@ export const query = graphql`
 export default function Inspiration({ data }) {
   const posts = data.allMdx.nodes.map(papaya => {
     return (
-      <article key={data.allMdx.nodes.indexOf(papaya)}>
-        <h1>{papaya.frontmatter.title}</h1>
-        <h2>{papaya.frontmatter.date.slice(0, 10)}</h2>
+      <article
+        className={styles.article}
+        key={data.allMdx.nodes.indexOf(papaya)}
+      >
+        <h1 className={styles.title}>{papaya.frontmatter.title}</h1>
+        <h2 className={styles.date}>{papaya.frontmatter.date.slice(0, 10)}</h2>
         <ReactMarkdown allowDangerousHtml={true} className="post">
           {papaya.rawBody}
         </ReactMarkdown>
@@ -36,11 +40,11 @@ export default function Inspiration({ data }) {
   return (
     <>
       <Helmet></Helmet>
-      <main
-        className="box"
-        style={{ width: '100vw', height: '100vh', border: '2px solid red' }}
-      >
+      <main className={styles.box} style={{ width: '100vw' }}>
         {posts}
+        <div>
+          <a>Go back to page button</a>
+        </div>
       </main>
     </>
   )
