@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import FilmList from '../components/film-list'
 import Footer from '../components/footer'
 import ToggleableSplash from '../components/toggleable-splash'
 import { Helmet } from 'react-helmet'
+import { navigate } from 'gatsby'
 
-export default function Home() {
+export default function Home(props) {
   const [splashVisible, setSplashVisible] = useState(true)
 
   function toggleSplashVisible() {
@@ -75,6 +76,7 @@ export default function Home() {
       <main>
         <div id="#top" />
         <ToggleableSplash
+          location={props.location.state}
           splashVisible={splashVisible}
           toggleSplashVisible={toggleSplashVisible}
         />

@@ -18,7 +18,9 @@ const ExpandingDiv = styled.div`
   height: ${props => (props.height ? props.height + 'px' : '100vh')};
   position: absolute;
   top: 0;
-  animation: ${props => expand(props.animationCenter)} 500ms linear;
+  animation: ${props =>
+      props.animationCenter ? expand(props.animationCenter) : null}
+    500ms linear;
   animation-fill-mode: forwards;
 `
 

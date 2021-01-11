@@ -1,5 +1,5 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React, { useState, useEffect } from 'react'
+import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
 import styles from '../components/blog.module.scss'
@@ -43,7 +43,7 @@ export default function Inspiration({ data }) {
       <main className={styles.box} style={{ width: '100vw' }}>
         {posts}
         <div>
-          <a>Go back to page button</a>
+          <Link to={'/'}>Go back to page button</Link>
         </div>
       </main>
     </>

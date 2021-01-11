@@ -12,6 +12,9 @@ export default function ToggleableSplash(props) {
   const [height, setHeight] = useState(null)
 
   useEffect(() => {
+    if (props.location.referrer) {
+      toggleSplashVisible()
+    }
     if (isMobile) setHeight(window.innerHeight)
   }, [])
 
@@ -32,6 +35,7 @@ export default function ToggleableSplash(props) {
   return (
     <div className="splash">
       <LogoButton
+        // referrer={props.location.referrer}
         onClick={toggleSplashVisible}
         splashVisible={props.splashVisible}
       />
