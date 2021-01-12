@@ -18,7 +18,6 @@ export default function LogoButton(props) {
   }
 
   useEffect(() => {
-    // if (props.referrer && !props.splashVisible) setPos({ x: 250, y: 400 })
     window.addEventListener('mousemove', updatePos)
     return () => window.removeEventListener('mousemove', updatePos)
   }, [props.splashVisible])

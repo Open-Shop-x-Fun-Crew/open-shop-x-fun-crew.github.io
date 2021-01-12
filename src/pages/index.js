@@ -76,7 +76,6 @@ export default function Home(props) {
       <main>
         <div id="#top" />
         <ToggleableSplash
-          location={props.location.state}
           splashVisible={splashVisible}
           toggleSplashVisible={toggleSplashVisible}
         />
