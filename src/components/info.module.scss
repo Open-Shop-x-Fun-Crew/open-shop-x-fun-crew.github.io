@@ -36,7 +36,7 @@
 
 .info {
   height: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -46,18 +46,18 @@
 }
 
 .infotext {
+  position: absolute;
   text-align: center;
-  grid-column: 3/7;
-  grid-row: 4/7;
-  line-height: 2.2rem;
+  top: 46vh;
+  left: 50vw;
+  width: 70%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 800px;
+  line-height: 2.4rem;
   font-kerning: normal;
-  width: 50vw;
-  height: 100%;
-  align-items: center;
-  padding-top: 2rem;
   z-index: 10000;
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-family: 'pathway gothic one';
   }
 }
@@ -83,6 +83,7 @@ figcaption {
   grid-column: 2/4;
   grid-row: 6/8;
   font-size: 0.7rem;
+  padding-top: 2rem;
 }
 
 .lookhere {
@@ -148,6 +149,67 @@ figcaption {
   color: rgb(21, 21, 21);
   transform: scale(1.01);
 }
+@media only screen and (min-width: 1401px) {
+  .infotext {
+    top: 45vh;
+    line-height: 2.9rem;
+    h1 {
+      font-size: 2.3rem;
+    }
+  }
+  .portrait {
+    max-width: 200px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .infotext {
+    width: 70%;
+    line-height: 3.4rem;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  .portrait {
+    max-width: 350px;
+  }
+
+  .info {
+    max-width: 2000px;
+  }
+
+  .skate,
+  .kick,
+  .blog,
+  .kick button {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .infotext {
+    max-width: 1200px;
+    width: 100%;
+    line-height: 4.7rem;
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  .portrait {
+    max-width: 350px;
+  }
+
+  .info {
+    max-width: 3000px;
+  }
+
+  .skate,
+  .kick,
+  .blog,
+  .kick button {
+    font-size: 4rem;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   .portrait {
@@ -159,9 +221,8 @@ figcaption {
   }
 
   .infotext {
-    grid-row: 2/7;
-    grid-column: 2/5;
-    width: 75vw;
+    width: 80%;
+    top: 30vh;
     line-height: 2rem;
     h1 {
       font-size: 1.6rem;
@@ -189,14 +250,3 @@ figcaption {
     grid-row: 8/9;
   }
 }
-
-// @media only screen and (max-width: 400px) {
-//   .infotext {
-//     font-size: 0.4rem;
-//     width: 75vw;
-//     line-height: 1.9rem;
-//     h1 {
-//       font-size: 1.4rem;
-//     }
-//   }
-// }
