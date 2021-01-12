@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
 import styles from '../components/blog.module.scss'
 import { useCookies } from 'react-cookie'
+import { Link as ScrollLink } from 'react-scroll'
 
 export const query = graphql`
   query blogQuery {
@@ -64,16 +65,40 @@ export default function Inspiration({ data }) {
         <meta name="author" content="OpenShop" />
         <meta name="viewport" content-width="device-width" initial-scale={1} />
       </Helmet>
-      <main className={styles.box} style={{ width: '100vw' }}>
+      <main id="topBlog" className={styles.box} style={{ width: '100vw' }}>
         <div className={styles.blogBody}>
           <div className={styles.top_container}>
             <div className={styles.header}>Open Shop | Inspiration</div>
             <Link to={'/'} className={styles.homeBtn}>
               {' '}
-              going <br></br> home
+              going home
             </Link>
           </div>
           {posts}
+          <footer>
+            <address>
+              open shop
+              <br />
+              Nytorgsgatan 20
+              <br />
+              117 54 Stockholm
+              <br />
+              info@openshop.se
+            </address>
+            <ScrollLink
+              activeClass="active"
+              to="topBlog"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <div className={styles.logo}>
+                open
+                <br />
+                shop.
+              </div>
+            </ScrollLink>
+          </footer>
         </div>
       </main>
     </>
