@@ -37,6 +37,7 @@ export default function Info(props) {
       animationCenter={props.animationCenter}
       style={{ zIndex: props.onTop ? 90 : 0 }}
     >
+
       <div className={styles.background}>
         <div className={styles.bottomBar}></div>
         <div id="info" className={styles.info}>
@@ -44,7 +45,8 @@ export default function Info(props) {
             <img
               className={styles.portrait}
               src={martin}
-              alt="Martin as a child with his father, on the beach."
+              alt="Martin wearing a black beanie and a mustard yellow shirt. He is crouched next to his daughter, who has long brown hair and a jumper of matching colour to Martins. Martin is looking at what his daughter is doing(which is out of shot)."
+
             />
             <figcaption>Martin Sandin</figcaption>
           </figure>
@@ -65,7 +67,8 @@ export default function Info(props) {
             <img
               className={styles.portrait}
               src={viktor}
-              alt="Viktor as a baby, with his father in their living room. Dad is taking a photo of Martin with an old style camera."
+              alt="Low angle shot of Viktor wearing blue dungarees, purple shirt and a baseball cap, and looking into the distance. A blurred out lamp post can be seen in the background."
+
             />
             <figcaption>Viktor Annerstål</figcaption>
           </figure>
@@ -81,6 +84,7 @@ export default function Info(props) {
           >
             On the road
           </GatsbyLink>
+
 
           <Link
             className={styles.lookhere}
