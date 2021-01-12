@@ -23,6 +23,13 @@ const ExpandingDiv = styled.div`
   animation-fill-mode: forwards;
 `
 
+const Background = styled.div`
+  background-color: #f7e7ce;
+  width: 100vw;
+  height: ${props => (props.height ? props.height + 'px' : '100vh')};
+  position: relative;
+`
+
 export default function Info(props) {
   const [hiddenEmail, sethiddenEmail] = useState(true)
 
@@ -37,8 +44,7 @@ export default function Info(props) {
       animationCenter={props.animationCenter}
       style={{ zIndex: props.onTop ? 90 : 0 }}
     >
-
-      <div className={styles.background}>
+      <Background height={props.mobileHeight}>
         <div className={styles.bottomBar}></div>
         <div className={styles.infotext}>
           <h1>
@@ -54,7 +60,6 @@ export default function Info(props) {
               className={styles.portrait}
               src={martin}
               alt="Martin wearing a black beanie and a mustard yellow shirt. He is crouched next to his daughter, who has long brown hair and a jumper of matching colour to Martins. Martin is looking at what his daughter is doing(which is out of shot)."
-
             />
             <figcaption>Martin Sandin</figcaption>
           </figure>
@@ -68,7 +73,6 @@ export default function Info(props) {
               className={styles.portrait}
               src={viktor}
               alt="Low angle shot of Viktor wearing blue dungarees, purple shirt and a baseball cap, and looking into the distance. A blurred out lamp post can be seen in the background."
-
             />
             <figcaption>Viktor Annerstål</figcaption>
           </figure>
@@ -85,7 +89,6 @@ export default function Info(props) {
             On the road
           </GatsbyLink>
 
-
           <Link
             className={styles.lookhere}
             activeClass="active"
@@ -97,7 +100,7 @@ export default function Info(props) {
             look here
           </Link>
         </div>
-      </div>
+      </Background>
     </ExpandingDiv>
   )
 }
