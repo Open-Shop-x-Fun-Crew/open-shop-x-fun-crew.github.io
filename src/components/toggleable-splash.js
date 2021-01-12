@@ -14,9 +14,7 @@ export default function ToggleableSplash(props) {
   const [cookies, setCookie] = useCookies(['visited'])
 
   useEffect(() => {
-    // console.log(cookies['visited'])
     if (cookies['visited']) {
-      // console.log('hello')
       toggleSplashVisible({ x: 0, y: 0 })
     }
     if (isMobile) setHeight(window.innerHeight)
