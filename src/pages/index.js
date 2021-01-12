@@ -31,6 +31,10 @@ export default function Home(props) {
         <meta name="language" content="English" />
         <meta name="author" content="OpenShop" />
         <meta name="viewport" content-width="device-width" initial-scale={1} />
+        <script
+          defer
+          src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+        ></script>
         <link
           rel="preload"
           href="splashvids/fg_1.mp4"
