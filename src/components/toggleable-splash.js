@@ -11,7 +11,7 @@ export default function ToggleableSplash(props) {
   const [clickPosSplash, setClickPosSplash] = useState({ x: 0, y: 0 })
   const [clickPosInfo, setClickPosInfo] = useState({ x: 0, y: 0 })
   const [height, setHeight] = useState(null)
-  const [cookies, setCookie] = useCookies(['visited'])
+  const [cookies] = useCookies(['visited'])
 
   useEffect(() => {
     if (cookies['visited']) {

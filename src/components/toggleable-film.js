@@ -1,6 +1,5 @@
 import React from 'react'
 import Player from '../components/player'
-import { Link } from 'react-scroll'
 
 import styles from './toggleable-film.module.scss'
 

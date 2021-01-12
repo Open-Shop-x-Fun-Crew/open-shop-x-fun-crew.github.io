@@ -3,11 +3,9 @@ import FilmList from '../components/film-list'
 import Footer from '../components/footer'
 import ToggleableSplash from '../components/toggleable-splash'
 import { Helmet } from 'react-helmet'
-import { useCookies } from 'react-cookie'
 
 export default function Home(props) {
   const [splashVisible, setSplashVisible] = useState(true)
-  const [cookies, setCookie] = useCookies(['visited'])
 
   function toggleSplashVisible() {
     setSplashVisible(!splashVisible)
