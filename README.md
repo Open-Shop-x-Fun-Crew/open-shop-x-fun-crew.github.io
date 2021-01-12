@@ -37,23 +37,23 @@ The tasks on a larger scale were split into 4 main sections, Neha was headlining
 
 **Tools and Tech stack:**
 
-[Figma:](https://www.figma.com/) "A vector graphics editor and prototyping tool."
+[Figma:](https://www.figma.com/) A vector graphics editor and prototyping tool.
 
-[Gatsbyjs:](https://www.gatsbyjs.com/) “An open-source framework based on React that helps developers build blazing-fast websites and apps.”
+[Gatsbyjs:](https://www.gatsbyjs.com/) An open-source framework based on React that helps developers build blazing-fast websites and apps.
 
-[React:](https://reactjs.org/) “An open-source, front end, JavaScript library for building user interfaces or UI components.”
+[React:](https://reactjs.org/) An open-source, front end, JavaScript library for building user interfaces or UI components.
 
-[Markdown:](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/) "An authorable format that lets you seamlessly write JSX in your Markdown documents. "
+[Markdown:](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/) An authorable format that lets you seamlessly write JSX in your Markdown documents.
 
-[GitHub Actions:](https://github.com/features/actions/) "A tool that makes it easy to automate all your software workflows. Build, test, and deploy your code right from GitHub"
+[GitHub Actions:](https://github.com/features/actions/) A tool that makes it easy to automate all your software workflows. Build, test, and deploy your code right from GitHub.
 
-[DaVinci Resolve:](https://www.blackmagicdesign.com/products/davinciresolve/) "A tool that combines editing, color correction, visual effects, motion graphics and audio."
+[DaVinci Resolve:](https://www.blackmagicdesign.com/products/davinciresolve/) A tool that combines editing, color correction, visual effects, motion graphics and audio.
 
-[GraphQL:](https://graphql.org/) "A query language for APIs."
+[GraphQL:](https://graphql.org/) A query language for APIs.
 
 **Other Libraries and dependencies:**
 
-[Styled Components:](https://www.npmjs.com/package/react-graph-vis) A React component to display beautiful network graphs using vis.js
+[Styled Components:](https://styled-components.com/) A way to enable developers to have a more structured way of doing CSS in JSX.
 
 **Contributors:**
 
