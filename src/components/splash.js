@@ -29,7 +29,7 @@ const ExpandingDiv = styled.div`
 
 export default function Splash(props) {
   const [index, setIndex] = useState(null)
-  const [removeCookie] = useCookies(['visited'])
+  const [cookie, setCookie, removeCookie] = useCookies(['visited'])
 
   useEffect(() => {
     removeCookie('visited')
