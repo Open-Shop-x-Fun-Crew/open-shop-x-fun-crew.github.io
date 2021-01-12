@@ -47,9 +47,9 @@ The tasks on a larger scale were split into 4 main sections, Neha was headlining
 
 [GitHub Actions:](https://github.com/features/actions/) "A tool that makes it easy to automate all your software workflows. Build, test, and deploy your code right from GitHub"
 
-[DaVinci Resolve:](https://www.blackmagicdesign.com/products/davinciresolve/)"combines editing, color correction, visual effects, motion graphics and audio."
+[DaVinci Resolve:](https://www.blackmagicdesign.com/products/davinciresolve/) "A tool that combines editing, color correction, visual effects, motion graphics and audio."
 
-[GraphQL:](https://graphql.org/)"A query language for APIs."
+[GraphQL:](https://graphql.org/) "A query language for APIs."
 
 **Other Libraries and dependencies:**
 
