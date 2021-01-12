@@ -4,14 +4,19 @@ import Splash from '../components/splash'
 import Info from '../components/info'
 import useDelayedUnmounting from '../hooks/use-delayed-unmounting'
 import { isMobile } from 'react-device-detect'
+import { useCookies } from 'react-cookie'
 
 export default function ToggleableSplash(props) {
   const [state, show, hide] = useDelayedUnmounting(510)
   const [clickPosSplash, setClickPosSplash] = useState({ x: 0, y: 0 })
   const [clickPosInfo, setClickPosInfo] = useState({ x: 0, y: 0 })
   const [height, setHeight] = useState(null)
+  const [cookies, setCookie] = useCookies(['visited'])
 
   useEffect(() => {
+    if (cookies['visited']) {
+      toggleSplashVisible({ x: 0, y: 0 })
+    }
     if (isMobile) setHeight(window.innerHeight)
   }, [])
 
@@ -37,6 +42,7 @@ export default function ToggleableSplash(props) {
       />
       {state !== 'unmounted' && (
         <Info
+          visited={cookies['visited']}
           animationCenter={clickPosInfo}
           onTop={!props.splashVisible}
           mobileHeight={height}

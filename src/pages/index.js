@@ -3,9 +3,11 @@ import FilmList from '../components/film-list'
 import Footer from '../components/footer'
 import ToggleableSplash from '../components/toggleable-splash'
 import { Helmet } from 'react-helmet'
+import { useCookies } from 'react-cookie'
 
-export default function Home() {
+export default function Home(props) {
   const [splashVisible, setSplashVisible] = useState(true)
+  const [cookies, setCookie] = useCookies(['visited'])
 
   function toggleSplashVisible() {
     setSplashVisible(!splashVisible)
@@ -14,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>OpenShop</title>
+        <title>Open Shop</title>
         <meta name="title" content="Open Shop filmmaking" />
         <meta
           name="description"
@@ -29,6 +31,10 @@ export default function Home() {
         <meta name="language" content="English" />
         <meta name="author" content="OpenShop" />
         <meta name="viewport" content-width="device-width" initial-scale={1} />
+        <script
+          defer
+          src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+        ></script>
         <link
           rel="preload"
           href="splashvids/fg_1.mp4"

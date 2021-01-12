@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react'
 import styles from './logo-button.module.scss'
 
 export default function LogoButton(props) {
-  const [pos, setPos] = useState({ x: null, y: null })
+  const [pos, setPos] = useState({
+    x: 200,
+    y: 200,
+  })
 
   function onClick(e) {
     props.onClick({ x: pos.x, y: pos.y })
