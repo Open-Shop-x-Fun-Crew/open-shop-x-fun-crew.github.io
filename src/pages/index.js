@@ -16,7 +16,7 @@ export default function Home(props) {
   return (
     <>
       <Helmet>
-        <title>OpenShop</title>
+        <title>Open Shop</title>
         <meta name="title" content="Open Shop filmmaking" />
         <meta
           name="description"

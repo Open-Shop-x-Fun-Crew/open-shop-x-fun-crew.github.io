@@ -32,16 +32,41 @@ export default function Inspiration({ data }) {
 
   const posts = data.allMdx.nodes.map(papaya => {
     return (
-      <article
-        className={styles.article}
-        key={data.allMdx.nodes.indexOf(papaya)}
-      >
-        <h1 className={styles.title}>{papaya.frontmatter.title}</h1>
-        <h2 className={styles.date}>{papaya.frontmatter.date.slice(0, 10)}</h2>
-        <ReactMarkdown allowDangerousHtml={true} className="post">
-          {papaya.rawBody}
-        </ReactMarkdown>
-      </article>
+      <>
+        <Helmet>
+          <title>Open Shop / Inspiration</title>
+          <meta name="title" content="Open Shop filmmaking blog" />
+          <meta
+            name="description"
+            content="Open Shop is filmmaking duo Martin Sandin & Viktor Annerstål. Martin writes and directs. Viktor edits and shoots. This is their blog where they discuss their upcoming projects, their inpsiration, and other topics pertaining to the film industry in general"
+          />
+          <meta
+            name="keywords"
+            content="filmmaking, stockholm, sweden, documentaries, documentary, street, mad dog from chaos to comeback, distressed, dimmiga dar, short film, photography, video, trailer, films, movies, openshop, open shop, art, artistic, filmskapande, dokumentärer, dokumentär, gata, kort film, fotografi, filmer, Martin sandin, viktor Annerstål, konst, konstnärlig"
+          />
+          <meta name="robots" content="index, follow"></meta>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="author" content="OpenShop" />
+          <meta
+            name="viewport"
+            content-width="device-width"
+            initial-scale={1}
+          />
+        </Helmet>
+        <article
+          className={styles.article}
+          key={data.allMdx.nodes.indexOf(papaya)}
+        >
+          <h1 className={styles.title}>{papaya.frontmatter.title}</h1>
+          <h2 className={styles.date}>
+            {papaya.frontmatter.date.slice(0, 10)}
+          </h2>
+          <ReactMarkdown allowDangerousHtml={true} className="post">
+            {papaya.rawBody}
+          </ReactMarkdown>
+        </article>
+      </>
     )
   })
 

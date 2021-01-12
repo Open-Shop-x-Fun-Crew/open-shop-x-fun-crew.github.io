@@ -8,3 +8,14 @@ p {
     display: none;
   }
 }
+
+html {
+  ::-moz-selection {
+    background: transparent;
+    color: white;
+  }
+  ::selection {
+    background: black;
+    color: white;
+  }
+}
