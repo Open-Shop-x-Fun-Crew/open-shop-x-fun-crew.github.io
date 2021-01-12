@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 
 import styles from './player.module.scss'
 
 export default function Player(props) {
+  const el = useRef(null)
+
+  useEffect(() => {
+    el.current.scrollIntoView({ behavior: 'smooth' })
+  }, [])
+
   return (
-    <div className={styles.outerwrapper}>
+    <div className={styles.outerwrapper} ref={el}>
       <div className={styles.playwrapper}>
         <ReactPlayer
           url={props.url}
