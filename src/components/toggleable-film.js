@@ -23,6 +23,7 @@ export default function ToggleableFilm(props) {
       spy={true}
       smooth={true}
       duration={500}
+      isDynamic={true}
     >
       <li className={styles.filmstrip}>
         <img
