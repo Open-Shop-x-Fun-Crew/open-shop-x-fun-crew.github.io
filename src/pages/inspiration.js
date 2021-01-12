@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { graphql, Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import ReactMarkdown from 'react-markdown'
 import styles from '../components/blog.module.scss'
+import { useCookies } from 'react-cookie'
 
 export const query = graphql`
   query blogQuery {
@@ -22,6 +23,13 @@ export const query = graphql`
 `
 
 export default function Inspiration({ data }) {
+  const [cookies, setCookie] = useCookies(['visited'])
+
+  useEffect(() => {
+    console.log(cookies)
+    setCookie('visited', true)
+  })
+
   const posts = data.allMdx.nodes.map(papaya => {
     return (
       <article

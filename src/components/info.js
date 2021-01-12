@@ -18,8 +18,7 @@ const ExpandingDiv = styled.div`
   height: ${props => (props.height ? props.height + 'px' : '100vh')};
   position: absolute;
   top: 0;
-  animation: ${props =>
-      props.animationCenter ? expand(props.animationCenter) : null}
+  animation: ${props => (!props.visited ? expand(props.animationCenter) : null)}
     500ms linear;
   animation-fill-mode: forwards;
 `
@@ -33,6 +32,7 @@ export default function Info(props) {
 
   return (
     <ExpandingDiv
+      visited={props.visited}
       height={props.mobileHeight}
       animationCenter={props.animationCenter}
       style={{ zIndex: props.onTop ? 90 : 0 }}

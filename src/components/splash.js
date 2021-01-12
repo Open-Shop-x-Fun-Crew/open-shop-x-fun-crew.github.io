@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './splash.module.scss'
 import styled, { keyframes } from 'styled-components'
-
+import { useCookies } from 'react-cookie'
 import filmInfo from '../films/films.json'
 
 const noOfSplashVids = filmInfo.splashVideos
@@ -29,8 +29,12 @@ const ExpandingDiv = styled.div`
 
 export default function Splash(props) {
   const [index, setIndex] = useState(null)
+  const [cookies, setCookie, removeCookie] = useCookies(['visited'])
 
-  useEffect(() => setIndex(Math.floor(Math.random() * noOfSplashVids) + 1), [])
+  useEffect(() => {
+    removeCookie('visited')
+    setIndex(Math.floor(Math.random() * noOfSplashVids) + 1)
+  }, [])
 
   function next() {
     setIndex(index => (index === noOfSplashVids ? 1 : index + 1))
