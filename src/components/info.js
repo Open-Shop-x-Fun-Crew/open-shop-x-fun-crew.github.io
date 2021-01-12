@@ -40,6 +40,14 @@ export default function Info(props) {
 
       <div className={styles.background}>
         <div className={styles.bottomBar}></div>
+        <div className={styles.infotext}>
+          <h1>
+            Open Shop is filmmaking duo Martin Sandin & Viktor Annerstål. Martin
+            is the director and screenwriter. Viktor the DoP and editor. We
+            believe in making a difference through stories. Let’s do it
+            together.
+          </h1>
+        </div>
         <div id="info" className={styles.info}>
           <figure className={styles.martin}>
             <img
@@ -54,15 +62,7 @@ export default function Info(props) {
             <button onClick={togglehiddenEmail}>We’re open</button>
             <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
           </section>
-          <div className={styles.infotext}>
-            <h1>
-              Open Shop is filmmaking duo Martin Sandin & Viktor Annerstål.
-              <br />
-              Martin is the director and screenwriter. Viktor the DoP and
-              editor. We believe in making a difference through stories. Let’s
-              do it together.
-            </h1>
-          </div>
+
           <figure className={styles.viktor}>
             <img
               className={styles.portrait}
