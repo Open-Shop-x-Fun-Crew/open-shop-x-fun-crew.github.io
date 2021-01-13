@@ -3,7 +3,9 @@ import styles from './logo-button.module.scss'
 import { isMobile } from 'react-device-detect'
 
 export default function LogoButton(props) {
-  const [pos, setPos] = useState({ x: null, y: null })
+  const [pos, setPos] = useState(
+    isMobile ? { x: null, y: null } : { x: 200, y: 200 }
+  )
 
   function onClick(e) {
     props.onClick({ x: pos.x, y: pos.y })
@@ -16,9 +18,11 @@ export default function LogoButton(props) {
   }
 
   useEffect(() => {
-    isMobile
-      ? setPos({ x: window.innerWidth - 60, y: 60 })
-      : setPos({ x: 200, y: 200 })
+    console.log(isMobile, props, props.mobileWidth)
+    isMobile ? setPos({ x: props.mobileWidth - 60, y: 60 }) : console.log()
+  }, [props.mobileWidth])
+
+  useEffect(() => {
     window.addEventListener('mousemove', updatePos)
     return () => window.removeEventListener('mousemove', updatePos)
   }, [props.splashVisible])

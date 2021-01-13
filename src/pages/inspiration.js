@@ -27,7 +27,6 @@ export default function Inspiration({ data }) {
   const [cookies, setCookie] = useCookies(['visited'])
 
   useEffect(() => {
-    console.log(cookies)
     setCookie('visited', true)
   })
 

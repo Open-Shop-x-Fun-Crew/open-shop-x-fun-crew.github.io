@@ -11,13 +11,17 @@ export default function ToggleableSplash(props) {
   const [clickPosSplash, setClickPosSplash] = useState({ x: 0, y: 0 })
   const [clickPosInfo, setClickPosInfo] = useState({ x: 0, y: 0 })
   const [height, setHeight] = useState(null)
+  const [width, setWidth] = useState(null)
   const [cookies] = useCookies(['visited'])
 
   useEffect(() => {
     if (cookies['visited']) {
       toggleSplashVisible({ x: 0, y: 0 })
     }
-    if (isMobile) setHeight(window.innerHeight)
+    if (isMobile) {
+      setHeight(window.innerHeight)
+      setWidth(window.innerWidth)
+    }
   }, [])
 
   function toggleState() {
@@ -39,6 +43,7 @@ export default function ToggleableSplash(props) {
       <LogoButton
         onClick={toggleSplashVisible}
         splashVisible={props.splashVisible}
+        mobileWidth={width}
       />
       {state !== 'unmounted' && (
         <Info
