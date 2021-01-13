@@ -65,7 +65,9 @@ export default function Info(props) {
           </figure>
           <section className={styles.kick}>
             <button onClick={togglehiddenEmail}>We’re open</button>
-            <p className={hiddenEmail ? styles.hidden : ''}>info@openshop.se</p>
+            <p className={hiddenEmail ? styles.hidden : ''}>
+              hello@openshopfilm.com
+            </p>
           </section>
 
           <figure className={styles.viktor}>
@@ -77,7 +79,7 @@ export default function Info(props) {
             <figcaption>Viktor Annerstål</figcaption>
           </figure>
           <a
-            href="https://www.instagram.com/artandpoeticjustice/?hl=en"
+            href="https://www.instagram.com/openshopfilm/"
             className={`${styles.links} ${styles.skate}`}
           >
             Follow Open Shop

@@ -79,11 +79,11 @@ export default function Inspiration({ data }) {
             <address>
               open shop
               <br />
-              Nytorgsgatan 20
+              Skånegatan 70
               <br />
-              117 54 Stockholm
+              116 37 Stockholm
               <br />
-              info@openshop.se
+              hello@openshopfilm.com
             </address>
             <ScrollLink
               activeClass="active"
