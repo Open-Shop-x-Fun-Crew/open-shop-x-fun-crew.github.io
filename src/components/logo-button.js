@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import styles from './logo-button.module.scss'
+import { isMobile } from 'react-device-detect'
 
 export default function LogoButton(props) {
-  const [pos, setPos] = useState({ x: window.innerWidth - 60, y: 60 })
+  const [pos, setPos] = useState({ x: 200, y: 200 })
+
+  useEffect(() =>
+    isMobile ? setPos({ x: window.innerWidth - 60, y: 60 }) : console.log()
+  )
 
   function onClick(e) {
     props.onClick({ x: pos.x, y: pos.y })
