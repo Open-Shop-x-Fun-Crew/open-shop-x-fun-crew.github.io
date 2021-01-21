@@ -47,7 +47,7 @@ export default function Inspiration({ data }) {
 
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang : "en" }}>
         <title>Open Shop / Inspiration</title>
         <meta name="title" content="Open Shop filmmaking blog" />
         <meta
